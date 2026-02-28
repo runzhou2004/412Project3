@@ -36,13 +36,13 @@ void LoadBalancer::scaleServers() {
 
     if (qSize > 80*sCount) {
         servers.push_back(new Server(sCount));
-        cout << "Added Server!";
+        cout << "Added Server!" << endl;
         restCounter = restCycles;
     }
     else if (qSize < 50*sCount && sCount > 1) {
         delete servers.back();
         servers.pop_back();
-        cout << "Removed Server!";
+        cout << "Removed Server!" << endl;
         restCounter = restCycles;
     }
 }

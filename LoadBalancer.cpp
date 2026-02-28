@@ -25,7 +25,7 @@ void LoadBalancer::processCycle() {
     scaleServers();
 }
 
-void LoadBalancer::scale() {
+void LoadBalancer::scaleServers() {
     if (restCounter > 0) {
         restCounter--;
         return;

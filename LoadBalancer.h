@@ -22,6 +22,7 @@ class LoadBalancer {
 
         void generateReq(Request* r);
         void processServers();
+        void processCycle();
         void scaleServers();
         int getServerCount();
         int getQueueSize();

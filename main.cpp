@@ -29,7 +29,7 @@ int main() {
         if (rand()%5 == 0) {
             lb.generateReq(new Request(randomIP(), randomIP(), rand()%10+1, (rand()%2 == 0 ? 'P' : 'S')));
         }
-        lb.processCycle()
+        lb.processCycle();
 
         cout << "Cycle: " << t << endl;
         cout << "Servers: " << lb.getServerCount() << endl;

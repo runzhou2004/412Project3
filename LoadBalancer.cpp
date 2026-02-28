@@ -46,3 +46,11 @@ void LoadBalancer::scaleServers() {
         restCounter = restCycles;
     }
 }
+
+int LoadBalancer::getServerCount() {
+    return servers.size();
+}
+
+int LoadBalancer::getQueueSize() {
+    return queue.size();
+}

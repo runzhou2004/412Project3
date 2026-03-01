@@ -1,0 +1,40 @@
+\hypertarget{structRequest}{}\doxysection{Request Struct Reference}
+\label{structRequest}\index{Request@{Request}}
+
+
+The \mbox{\hyperlink{structRequest}{Request}} struct represents an incoming request to the load balancer, containing information about the source and destination IP addresses, the time required to process the request, and the type of job (e.\+g., \textquotesingle{}P\textquotesingle{} for processing or \textquotesingle{}S\textquotesingle{} for storage). The \mbox{\hyperlink{structRequest}{Request}} struct is used to encapsulate the details of a request and is passed through the system as it is processed by the servers in the load balancer. It serves as a fundamental data structure for managing and processing incoming requests in the load balancing system.  
+
+
+
+
+{\ttfamily \#include $<$Request.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structRequest_adb30ff956101344e438ec5321a633402}\label{structRequest_adb30ff956101344e438ec5321a633402}} 
+{\bfseries Request} (string in, string out, int time, char type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structRequest_a673250f9e8c5b76f201ce4473d6bd38a}\label{structRequest_a673250f9e8c5b76f201ce4473d6bd38a}} 
+string {\bfseries ip\+In}
+\item 
+\mbox{\Hypertarget{structRequest_a5b6261d9519372caf3931cd6b33a56b1}\label{structRequest_a5b6261d9519372caf3931cd6b33a56b1}} 
+string {\bfseries ip\+Out}
+\item 
+\mbox{\Hypertarget{structRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}\label{structRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}} 
+int {\bfseries time}
+\item 
+\mbox{\Hypertarget{structRequest_ad49a0f18615ea50f9a11cd2494c93044}\label{structRequest_ad49a0f18615ea50f9a11cd2494c93044}} 
+char {\bfseries job\+Type}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structRequest}{Request}} struct represents an incoming request to the load balancer, containing information about the source and destination IP addresses, the time required to process the request, and the type of job (e.\+g., \textquotesingle{}P\textquotesingle{} for processing or \textquotesingle{}S\textquotesingle{} for storage). The \mbox{\hyperlink{structRequest}{Request}} struct is used to encapsulate the details of a request and is passed through the system as it is processed by the servers in the load balancer. It serves as a fundamental data structure for managing and processing incoming requests in the load balancing system. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Request.\+h\end{DoxyCompactItemize}

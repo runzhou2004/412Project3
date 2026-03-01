@@ -1,0 +1,110 @@
+\hypertarget{classLoadBalancer}{}\doxysection{Load\+Balancer Class Reference}
+\label{classLoadBalancer}\index{LoadBalancer@{LoadBalancer}}
+
+
+The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} class manages a pool of servers, a queue of incoming requests, and an IP blocker to handle traffic. It can generate requests, process them through the servers, and dynamically scale the number of servers based on the current load (queue size). The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} also implements a cooldown mechanism to prevent rapid scaling of servers. It provides methods to get the current number of servers and the size of the request queue for monitoring purposes. The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} is designed to efficiently distribute incoming requests while maintaining performance and resource utilization.  
+
+
+
+
+{\ttfamily \#include $<$Load\+Balancer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLoadBalancer_a357318c99ac50f2251d055e1b16f1b05}{Load\+Balancer}} (int initial\+Servers, int rest)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} with a specified number of initial servers and a cooldown period for scaling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadBalancer_a69951a7bb77be7fafd4d5ad6919abd80}\label{classLoadBalancer_a69951a7bb77be7fafd4d5ad6919abd80}} 
+\mbox{\hyperlink{classLoadBalancer_a69951a7bb77be7fafd4d5ad6919abd80}{$\sim$\+Load\+Balancer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} class, responsible for cleaning up dynamically allocated \mbox{\hyperlink{classServer}{Server}} objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoadBalancer_aef12c0a9d4d114db2b8fda090adaeff4}{generate\+Req}} (\mbox{\hyperlink{structRequest}{Request}} $\ast$r)
+\begin{DoxyCompactList}\small\item\em Generates a new request and adds it to the queue if the source IP is not blocked. If the IP is blocked, the request is discarded. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadBalancer_af5b99b2c69d79311f1ec034df9cc009c}\label{classLoadBalancer_af5b99b2c69d79311f1ec034df9cc009c}} 
+void \mbox{\hyperlink{classLoadBalancer_af5b99b2c69d79311f1ec034df9cc009c}{process\+Servers}} ()
+\begin{DoxyCompactList}\small\item\em Processes the requests on each server for a single cycle. This includes checking if any servers have completed their current request and clearing them, as well as assigning new requests from the queue to any idle servers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadBalancer_a6bce6a222885011f395aaa71fcd72bfd}\label{classLoadBalancer_a6bce6a222885011f395aaa71fcd72bfd}} 
+void \mbox{\hyperlink{classLoadBalancer_a6bce6a222885011f395aaa71fcd72bfd}{process\+Cycle}} ()
+\begin{DoxyCompactList}\small\item\em Processes a single cycle of the load balancer, which includes processing requests on each server, assigning new requests from the queue to idle servers, and scaling the number of servers based on the current load. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadBalancer_a27ac46f6a79556fda93e49dfc3b9d041}\label{classLoadBalancer_a27ac46f6a79556fda93e49dfc3b9d041}} 
+void \mbox{\hyperlink{classLoadBalancer_a27ac46f6a79556fda93e49dfc3b9d041}{scale\+Servers}} ()
+\begin{DoxyCompactList}\small\item\em Scales the number of servers based on the current load (queue size) and the number of active servers. If the queue size exceeds a certain threshold, a new server is added. If the queue size is below a certain threshold and there are more than one server, a server is removed. The method also implements a cooldown mechanism to prevent rapid scaling. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLoadBalancer_a8e73dc5d30ddba1a041dc005e42726a8}{get\+Server\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current number of servers in the load balancer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLoadBalancer_ac104e708c3d8a6984122d9a0df13b80b}{get\+Queue\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current size of the request queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} class manages a pool of servers, a queue of incoming requests, and an IP blocker to handle traffic. It can generate requests, process them through the servers, and dynamically scale the number of servers based on the current load (queue size). The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} also implements a cooldown mechanism to prevent rapid scaling of servers. It provides methods to get the current number of servers and the size of the request queue for monitoring purposes. The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} is designed to efficiently distribute incoming requests while maintaining performance and resource utilization. 
+
+@bclass \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} \begin{DoxyNote}{Note}
+The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} class is a central component of the system, responsible for managing the flow of requests and ensuring that they are processed in a timely manner while also handling scaling and blocking of IP addresses as needed. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLoadBalancer_a357318c99ac50f2251d055e1b16f1b05}\label{classLoadBalancer_a357318c99ac50f2251d055e1b16f1b05}} 
+\index{LoadBalancer@{LoadBalancer}!LoadBalancer@{LoadBalancer}}
+\index{LoadBalancer@{LoadBalancer}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{LoadBalancer()}{LoadBalancer()}}
+{\footnotesize\ttfamily Load\+Balancer\+::\+Load\+Balancer (\begin{DoxyParamCaption}\item[{int}]{initial\+Servers,  }\item[{int}]{rest }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} with a specified number of initial servers and a cooldown period for scaling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+Servers} & The number of servers to start with. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLoadBalancer_aef12c0a9d4d114db2b8fda090adaeff4}\label{classLoadBalancer_aef12c0a9d4d114db2b8fda090adaeff4}} 
+\index{LoadBalancer@{LoadBalancer}!generateReq@{generateReq}}
+\index{generateReq@{generateReq}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{generateReq()}{generateReq()}}
+{\footnotesize\ttfamily void Load\+Balancer\+::generate\+Req (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structRequest}{Request}} $\ast$}]{r }\end{DoxyParamCaption})}
+
+
+
+Generates a new request and adds it to the queue if the source IP is not blocked. If the IP is blocked, the request is discarded. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & A pointer to the \mbox{\hyperlink{structRequest}{Request}} object to be generated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLoadBalancer_ac104e708c3d8a6984122d9a0df13b80b}\label{classLoadBalancer_ac104e708c3d8a6984122d9a0df13b80b}} 
+\index{LoadBalancer@{LoadBalancer}!getQueueSize@{getQueueSize}}
+\index{getQueueSize@{getQueueSize}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{getQueueSize()}{getQueueSize()}}
+{\footnotesize\ttfamily int Load\+Balancer\+::get\+Queue\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current size of the request queue. 
+
+\begin{DoxyReturn}{Returns}
+The number of requests in the queue. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLoadBalancer_a8e73dc5d30ddba1a041dc005e42726a8}\label{classLoadBalancer_a8e73dc5d30ddba1a041dc005e42726a8}} 
+\index{LoadBalancer@{LoadBalancer}!getServerCount@{getServerCount}}
+\index{getServerCount@{getServerCount}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{getServerCount()}{getServerCount()}}
+{\footnotesize\ttfamily int Load\+Balancer\+::get\+Server\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current number of servers in the load balancer. 
+
+\begin{DoxyReturn}{Returns}
+The number of servers. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Load\+Balancer.\+h\item 
+Load\+Balancer.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,500 @@
+Cycle: 1
+Processing Servers: 11
+Processing Queue: 990
+Streaming Servers: 11
+Streaming Queue: 990
+Cycle: 2
+Processing Servers: 11
+Processing Queue: 988
+Streaming Servers: 11
+Streaming Queue: 988
+Cycle: 3
+Processing Servers: 11
+Processing Queue: 988
+Streaming Servers: 11
+Streaming Queue: 987
+Cycle: 4
+Processing Servers: 11
+Processing Queue: 987
+Streaming Servers: 11
+Streaming Queue: 985
+Cycle: 5
+Processing Servers: 11
+Processing Queue: 987
+Streaming Servers: 11
+Streaming Queue: 985
+Cycle: 6
+Processing Servers: 11
+Processing Queue: 987
+Streaming Servers: 11
+Streaming Queue: 982
+Cycle: 7
+Processing Servers: 12
+Processing Queue: 986
+Streaming Servers: 12
+Streaming Queue: 982
+Cycle: 8
+Processing Servers: 12
+Processing Queue: 981
+Streaming Servers: 12
+Streaming Queue: 976
+Cycle: 9
+Processing Servers: 12
+Processing Queue: 978
+Streaming Servers: 12
+Streaming Queue: 975
+Cycle: 10
+Processing Servers: 12
+Processing Queue: 976
+Streaming Servers: 12
+Streaming Queue: 972
+Cycle: 11
+Processing Servers: 12
+Processing Queue: 969
+Streaming Servers: 12
+Streaming Queue: 969
+Cycle: 12
+Processing Servers: 12
+Processing Queue: 967
+Streaming Servers: 12
+Streaming Queue: 969
+Cycle: 13
+Processing Servers: 13
+Processing Queue: 966
+Streaming Servers: 13
+Streaming Queue: 968
+Cycle: 14
+Processing Servers: 13
+Processing Queue: 963
+Streaming Servers: 13
+Streaming Queue: 962
+Cycle: 15
+Processing Servers: 13
+Processing Queue: 959
+Streaming Servers: 13
+Streaming Queue: 961
+Cycle: 16
+Processing Servers: 13
+Processing Queue: 958
+Streaming Servers: 13
+Streaming Queue: 959
+Cycle: 17
+Processing Servers: 13
+Processing Queue: 955
+Streaming Servers: 13
+Streaming Queue: 958
+Cycle: 18
+Processing Servers: 13
+Processing Queue: 954
+Streaming Servers: 13
+Streaming Queue: 958
+Cycle: 19
+Processing Servers: 13
+Processing Queue: 953
+Streaming Servers: 13
+Streaming Queue: 955
+Cycle: 20
+Processing Servers: 13
+Processing Queue: 950
+Streaming Servers: 13
+Streaming Queue: 953
+Cycle: 21
+Processing Servers: 13
+Processing Queue: 947
+Streaming Servers: 13
+Streaming Queue: 950
+Cycle: 22
+Processing Servers: 13
+Processing Queue: 941
+Streaming Servers: 13
+Streaming Queue: 946
+Cycle: 23
+Processing Servers: 13
+Processing Queue: 939
+Streaming Servers: 13
+Streaming Queue: 944
+Cycle: 24
+Processing Servers: 13
+Processing Queue: 937
+Streaming Servers: 13
+Streaming Queue: 942
+Cycle: 25
+Processing Servers: 13
+Processing Queue: 934
+Streaming Servers: 13
+Streaming Queue: 940
+Cycle: 26
+Processing Servers: 13
+Processing Queue: 934
+Streaming Servers: 13
+Streaming Queue: 938
+Cycle: 27
+Processing Servers: 13
+Processing Queue: 933
+Streaming Servers: 13
+Streaming Queue: 937
+Cycle: 28
+Processing Servers: 13
+Processing Queue: 930
+Streaming Servers: 13
+Streaming Queue: 935
+Cycle: 29
+Processing Servers: 13
+Processing Queue: 928
+Streaming Servers: 13
+Streaming Queue: 933
+Cycle: 30
+Processing Servers: 13
+Processing Queue: 924
+Streaming Servers: 13
+Streaming Queue: 930
+Cycle: 31
+Processing Servers: 13
+Processing Queue: 921
+Streaming Servers: 13
+Streaming Queue: 927
+Cycle: 32
+Processing Servers: 13
+Processing Queue: 919
+Streaming Servers: 13
+Streaming Queue: 922
+Cycle: 33
+Processing Servers: 13
+Processing Queue: 918
+Streaming Servers: 13
+Streaming Queue: 919
+Cycle: 34
+Processing Servers: 13
+Processing Queue: 917
+Streaming Servers: 13
+Streaming Queue: 917
+Cycle: 35
+Processing Servers: 13
+Processing Queue: 915
+Streaming Servers: 13
+Streaming Queue: 917
+Cycle: 36
+Processing Servers: 13
+Processing Queue: 913
+Streaming Servers: 13
+Streaming Queue: 915
+Cycle: 37
+Processing Servers: 13
+Processing Queue: 909
+Streaming Servers: 13
+Streaming Queue: 912
+Cycle: 38
+Processing Servers: 13
+Processing Queue: 906
+Streaming Servers: 13
+Streaming Queue: 912
+Cycle: 39
+Processing Servers: 13
+Processing Queue: 906
+Streaming Servers: 13
+Streaming Queue: 909
+Cycle: 40
+Processing Servers: 13
+Processing Queue: 903
+Streaming Servers: 13
+Streaming Queue: 906
+Cycle: 41
+Processing Servers: 13
+Processing Queue: 901
+Streaming Servers: 13
+Streaming Queue: 902
+Cycle: 42
+Processing Servers: 13
+Processing Queue: 897
+Streaming Servers: 13
+Streaming Queue: 900
+Cycle: 43
+Processing Servers: 13
+Processing Queue: 895
+Streaming Servers: 13
+Streaming Queue: 899
+Cycle: 44
+Processing Servers: 13
+Processing Queue: 894
+Streaming Servers: 13
+Streaming Queue: 895
+Cycle: 45
+Processing Servers: 13
+Processing Queue: 891
+Streaming Servers: 13
+Streaming Queue: 893
+Cycle: 46
+Processing Servers: 13
+Processing Queue: 890
+Streaming Servers: 13
+Streaming Queue: 891
+Cycle: 47
+Processing Servers: 13
+Processing Queue: 888
+Streaming Servers: 13
+Streaming Queue: 891
+Cycle: 48
+Processing Servers: 13
+Processing Queue: 883
+Streaming Servers: 13
+Streaming Queue: 890
+Cycle: 49
+Processing Servers: 13
+Processing Queue: 881
+Streaming Servers: 13
+Streaming Queue: 885
+Cycle: 50
+Processing Servers: 13
+Processing Queue: 880
+Streaming Servers: 13
+Streaming Queue: 883
+Cycle: 51
+Processing Servers: 13
+Processing Queue: 878
+Streaming Servers: 13
+Streaming Queue: 882
+Cycle: 52
+Processing Servers: 13
+Processing Queue: 875
+Streaming Servers: 13
+Streaming Queue: 879
+Cycle: 53
+Processing Servers: 13
+Processing Queue: 875
+Streaming Servers: 13
+Streaming Queue: 876
+Cycle: 54
+Processing Servers: 13
+Processing Queue: 874
+Streaming Servers: 13
+Streaming Queue: 875
+Cycle: 55
+Processing Servers: 13
+Processing Queue: 871
+Streaming Servers: 13
+Streaming Queue: 871
+Cycle: 56
+Processing Servers: 13
+Processing Queue: 867
+Streaming Servers: 13
+Streaming Queue: 867
+Cycle: 57
+Processing Servers: 13
+Processing Queue: 863
+Streaming Servers: 13
+Streaming Queue: 866
+Cycle: 58
+Processing Servers: 13
+Processing Queue: 862
+Streaming Servers: 13
+Streaming Queue: 864
+Cycle: 59
+Processing Servers: 13
+Processing Queue: 860
+Streaming Servers: 13
+Streaming Queue: 860
+Cycle: 60
+Processing Servers: 13
+Processing Queue: 857
+Streaming Servers: 13
+Streaming Queue: 860
+Cycle: 61
+Processing Servers: 13
+Processing Queue: 855
+Streaming Servers: 13
+Streaming Queue: 859
+Cycle: 62
+Processing Servers: 13
+Processing Queue: 854
+Streaming Servers: 13
+Streaming Queue: 857
+Cycle: 63
+Processing Servers: 13
+Processing Queue: 852
+Streaming Servers: 13
+Streaming Queue: 855
+Cycle: 64
+Processing Servers: 13
+Processing Queue: 851
+Streaming Servers: 13
+Streaming Queue: 851
+Cycle: 65
+Processing Servers: 13
+Processing Queue: 850
+Streaming Servers: 13
+Streaming Queue: 850
+Cycle: 66
+Processing Servers: 13
+Processing Queue: 846
+Streaming Servers: 13
+Streaming Queue: 847
+Cycle: 67
+Processing Servers: 13
+Processing Queue: 845
+Streaming Servers: 13
+Streaming Queue: 847
+Cycle: 68
+Processing Servers: 13
+Processing Queue: 843
+Streaming Servers: 13
+Streaming Queue: 844
+Cycle: 69
+Processing Servers: 13
+Processing Queue: 839
+Streaming Servers: 13
+Streaming Queue: 842
+Cycle: 70
+Processing Servers: 13
+Processing Queue: 836
+Streaming Servers: 13
+Streaming Queue: 839
+Cycle: 71
+Processing Servers: 13
+Processing Queue: 834
+Streaming Servers: 13
+Streaming Queue: 838
+Cycle: 72
+Processing Servers: 13
+Processing Queue: 830
+Streaming Servers: 13
+Streaming Queue: 835
+Cycle: 73
+Processing Servers: 13
+Processing Queue: 828
+Streaming Servers: 13
+Streaming Queue: 834
+Cycle: 74
+Processing Servers: 13
+Processing Queue: 826
+Streaming Servers: 13
+Streaming Queue: 831
+Cycle: 75
+Processing Servers: 13
+Processing Queue: 825
+Streaming Servers: 13
+Streaming Queue: 829
+Cycle: 76
+Processing Servers: 13
+Processing Queue: 825
+Streaming Servers: 13
+Streaming Queue: 827
+Cycle: 77
+Processing Servers: 13
+Processing Queue: 824
+Streaming Servers: 13
+Streaming Queue: 825
+Cycle: 78
+Processing Servers: 13
+Processing Queue: 822
+Streaming Servers: 13
+Streaming Queue: 823
+Cycle: 79
+Processing Servers: 13
+Processing Queue: 818
+Streaming Servers: 13
+Streaming Queue: 821
+Cycle: 80
+Processing Servers: 13
+Processing Queue: 817
+Streaming Servers: 13
+Streaming Queue: 818
+Cycle: 81
+Processing Servers: 13
+Processing Queue: 813
+Streaming Servers: 13
+Streaming Queue: 817
+Cycle: 82
+Processing Servers: 13
+Processing Queue: 811
+Streaming Servers: 13
+Streaming Queue: 812
+Cycle: 83
+Processing Servers: 13
+Processing Queue: 807
+Streaming Servers: 13
+Streaming Queue: 810
+Cycle: 84
+Processing Servers: 13
+Processing Queue: 806
+Streaming Servers: 13
+Streaming Queue: 810
+Cycle: 85
+Processing Servers: 13
+Processing Queue: 805
+Streaming Servers: 13
+Streaming Queue: 808
+Cycle: 86
+Processing Servers: 13
+Processing Queue: 803
+Streaming Servers: 13
+Streaming Queue: 806
+Cycle: 87
+Processing Servers: 13
+Processing Queue: 804
+Streaming Servers: 13
+Streaming Queue: 805
+Cycle: 88
+Processing Servers: 13
+Processing Queue: 802
+Streaming Servers: 13
+Streaming Queue: 804
+Cycle: 89
+Processing Servers: 13
+Processing Queue: 800
+Streaming Servers: 13
+Streaming Queue: 800
+Cycle: 90
+Processing Servers: 13
+Processing Queue: 793
+Streaming Servers: 13
+Streaming Queue: 797
+Cycle: 91
+Processing Servers: 13
+Processing Queue: 792
+Streaming Servers: 13
+Streaming Queue: 796
+Cycle: 92
+Processing Servers: 13
+Processing Queue: 791
+Streaming Servers: 13
+Streaming Queue: 793
+Cycle: 93
+Processing Servers: 13
+Processing Queue: 789
+Streaming Servers: 13
+Streaming Queue: 791
+Cycle: 94
+Processing Servers: 13
+Processing Queue: 787
+Streaming Servers: 13
+Streaming Queue: 790
+Cycle: 95
+Processing Servers: 13
+Processing Queue: 786
+Streaming Servers: 13
+Streaming Queue: 788
+Cycle: 96
+Processing Servers: 13
+Processing Queue: 784
+Streaming Servers: 13
+Streaming Queue: 784
+Cycle: 97
+Processing Servers: 13
+Processing Queue: 779
+Streaming Servers: 13
+Streaming Queue: 783
+Cycle: 98
+Processing Servers: 13
+Processing Queue: 777
+Streaming Servers: 13
+Streaming Queue: 778
+Cycle: 99
+Processing Servers: 13
+Processing Queue: 772
+Streaming Servers: 13
+Streaming Queue: 778
+Cycle: 100
+Processing Servers: 13
+Processing Queue: 769
+Streaming Servers: 13
+Streaming Queue: 776

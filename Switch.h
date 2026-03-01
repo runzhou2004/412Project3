@@ -15,7 +15,7 @@ class Switch {
 
     public:
         Switch(LoadBalancer* p, LoadBalancer* s);
-        void routeRequest(Request r);
+        void routeRequest(Request* r);
 };
 
 #endif

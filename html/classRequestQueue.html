@@ -68,22 +68,104 @@ $(function() {
 <div class="title">RequestQueue Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="classRequestQueue.html" title="The RequestQueue class manages a queue of Request objects, providing methods to enqueue new requests,...">RequestQueue</a> class manages a queue of <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> objects, providing methods to enqueue new requests, dequeue requests for processing, check if the queue is empty, and get the current size of the queue. The <a class="el" href="classRequestQueue.html" title="The RequestQueue class manages a queue of Request objects, providing methods to enqueue new requests,...">RequestQueue</a> class serves as a fundamental component in the load balancing system, allowing for efficient management of incoming requests as they are processed by the servers in the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a>. It encapsulates the underlying data structure (a standard queue) and provides a simple interface for interacting with the queue of requests.  
+ <a href="classRequestQueue.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="RequestQueue_8h_source.html">RequestQueue.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0ed46d23990229662bd70d8a786379ef"><td class="memItemLeft" align="right" valign="top"><a id="a0ed46d23990229662bd70d8a786379ef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enqueue</b> (<a class="el" href="structRequest.html">Request</a> *r)</td></tr>
+<tr class="memitem:a0ed46d23990229662bd70d8a786379ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRequestQueue.html#a0ed46d23990229662bd70d8a786379ef">enqueue</a> (<a class="el" href="structRequest.html">Request</a> *r)</td></tr>
 <tr class="separator:a0ed46d23990229662bd70d8a786379ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d42ef39eb120ad7800864b09aca91be"><td class="memItemLeft" align="right" valign="top"><a id="a7d42ef39eb120ad7800864b09aca91be"></a>
-<a class="el" href="structRequest.html">Request</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>dequeue</b> ()</td></tr>
+<tr class="memitem:a7d42ef39eb120ad7800864b09aca91be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structRequest.html">Request</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRequestQueue.html#a7d42ef39eb120ad7800864b09aca91be">dequeue</a> ()</td></tr>
 <tr class="separator:a7d42ef39eb120ad7800864b09aca91be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaba0cd9ffc42a84ed759ffde763792d1"><td class="memItemLeft" align="right" valign="top"><a id="aaba0cd9ffc42a84ed759ffde763792d1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> ()</td></tr>
+<tr class="memitem:aaba0cd9ffc42a84ed759ffde763792d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRequestQueue.html#aaba0cd9ffc42a84ed759ffde763792d1">empty</a> ()</td></tr>
 <tr class="separator:aaba0cd9ffc42a84ed759ffde763792d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2a2a546ac5579e45ca11f433a8a804c"><td class="memItemLeft" align="right" valign="top"><a id="ac2a2a546ac5579e45ca11f433a8a804c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> ()</td></tr>
+<tr class="memitem:ac2a2a546ac5579e45ca11f433a8a804c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRequestQueue.html#ac2a2a546ac5579e45ca11f433a8a804c">size</a> ()</td></tr>
 <tr class="separator:ac2a2a546ac5579e45ca11f433a8a804c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="classRequestQueue.html" title="The RequestQueue class manages a queue of Request objects, providing methods to enqueue new requests,...">RequestQueue</a> class manages a queue of <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> objects, providing methods to enqueue new requests, dequeue requests for processing, check if the queue is empty, and get the current size of the queue. The <a class="el" href="classRequestQueue.html" title="The RequestQueue class manages a queue of Request objects, providing methods to enqueue new requests,...">RequestQueue</a> class serves as a fundamental component in the load balancing system, allowing for efficient management of incoming requests as they are processed by the servers in the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a>. It encapsulates the underlying data structure (a standard queue) and provides a simple interface for interacting with the queue of requests. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7d42ef39eb120ad7800864b09aca91be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d42ef39eb120ad7800864b09aca91be">&#9670;&nbsp;</a></span>dequeue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structRequest.html">Request</a> * RequestQueue::dequeue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dequeues a <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> object from the front of the queue for processing. The method returns a pointer to the <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> object that is being processed, or nullptr if the queue is empty. </p><dl class="section return"><dt>Returns</dt><dd>A pointer to the <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> object at the front of the queue, or nullptr if the queue is empty. The caller is responsible for managing the memory of the returned <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> object, as it will be processed and deleted by the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a>. This method removes and returns the <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> pointer at the front of the internal queue, allowing it to be processed by a server in the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a>. If the queue is empty, it returns nullptr to indicate that there are no requests to process. </dd></dl>
+
+</div>
+</div>
+<a id="aaba0cd9ffc42a84ed759ffde763792d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaba0cd9ffc42a84ed759ffde763792d1">&#9670;&nbsp;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RequestQueue::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if the queue is empty, indicating that there are no requests waiting to be processed. </p><dl class="section return"><dt>Returns</dt><dd>true if the queue is empty, false otherwise. This method allows the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> to determine if there are any pending requests that need to be processed. </dd></dl>
+
+</div>
+</div>
+<a id="a0ed46d23990229662bd70d8a786379ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed46d23990229662bd70d8a786379ef">&#9670;&nbsp;</a></span>enqueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RequestQueue::enqueue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRequest.html">Request</a> *&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enqueues a new <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> object into the queue. The request is added to the back of the queue, following the First-In-First-Out (FIFO) principle. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>A pointer to the <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> object to be enqueued. The caller is responsible for managing the memory of the <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> object, as it will be processed and deleted by the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a>. This method adds the given <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> pointer to the end of the internal queue, allowing it to be processed in order as requests are dequeued. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac2a2a546ac5579e45ca11f433a8a804c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2a2a546ac5579e45ca11f433a8a804c">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RequestQueue::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the current size of the queue, indicating how many requests are waiting to be processed. </p><dl class="section return"><dt>Returns</dt><dd>The number of <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> objects currently in the queue. This method allows the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> to monitor the load on the system and make decisions about scaling servers based on the number of pending requests. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="RequestQueue_8h_source.html">RequestQueue.h</a></li>
 <li>RequestQueue.cpp</li>

@@ -1,20 +1,69 @@
 \hypertarget{classRequestQueue}{}\doxysection{Request\+Queue Class Reference}
 \label{classRequestQueue}\index{RequestQueue@{RequestQueue}}
+
+
+The \mbox{\hyperlink{classRequestQueue}{Request\+Queue}} class manages a queue of \mbox{\hyperlink{structRequest}{Request}} objects, providing methods to enqueue new requests, dequeue requests for processing, check if the queue is empty, and get the current size of the queue. The \mbox{\hyperlink{classRequestQueue}{Request\+Queue}} class serves as a fundamental component in the load balancing system, allowing for efficient management of incoming requests as they are processed by the servers in the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}. It encapsulates the underlying data structure (a standard queue) and provides a simple interface for interacting with the queue of requests.  
+
+
+
+
+{\ttfamily \#include $<$Request\+Queue.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRequestQueue_a0ed46d23990229662bd70d8a786379ef}\label{classRequestQueue_a0ed46d23990229662bd70d8a786379ef}} 
-void {\bfseries enqueue} (\mbox{\hyperlink{structRequest}{Request}} $\ast$r)
+void \mbox{\hyperlink{classRequestQueue_a0ed46d23990229662bd70d8a786379ef}{enqueue}} (\mbox{\hyperlink{structRequest}{Request}} $\ast$r)
 \item 
-\mbox{\Hypertarget{classRequestQueue_a7d42ef39eb120ad7800864b09aca91be}\label{classRequestQueue_a7d42ef39eb120ad7800864b09aca91be}} 
-\mbox{\hyperlink{structRequest}{Request}} $\ast$ {\bfseries dequeue} ()
+\mbox{\hyperlink{structRequest}{Request}} $\ast$ \mbox{\hyperlink{classRequestQueue_a7d42ef39eb120ad7800864b09aca91be}{dequeue}} ()
 \item 
-\mbox{\Hypertarget{classRequestQueue_aaba0cd9ffc42a84ed759ffde763792d1}\label{classRequestQueue_aaba0cd9ffc42a84ed759ffde763792d1}} 
-bool {\bfseries empty} ()
+bool \mbox{\hyperlink{classRequestQueue_aaba0cd9ffc42a84ed759ffde763792d1}{empty}} ()
 \item 
-\mbox{\Hypertarget{classRequestQueue_ac2a2a546ac5579e45ca11f433a8a804c}\label{classRequestQueue_ac2a2a546ac5579e45ca11f433a8a804c}} 
-int {\bfseries size} ()
+int \mbox{\hyperlink{classRequestQueue_ac2a2a546ac5579e45ca11f433a8a804c}{size}} ()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classRequestQueue}{Request\+Queue}} class manages a queue of \mbox{\hyperlink{structRequest}{Request}} objects, providing methods to enqueue new requests, dequeue requests for processing, check if the queue is empty, and get the current size of the queue. The \mbox{\hyperlink{classRequestQueue}{Request\+Queue}} class serves as a fundamental component in the load balancing system, allowing for efficient management of incoming requests as they are processed by the servers in the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}. It encapsulates the underlying data structure (a standard queue) and provides a simple interface for interacting with the queue of requests. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRequestQueue_a7d42ef39eb120ad7800864b09aca91be}\label{classRequestQueue_a7d42ef39eb120ad7800864b09aca91be}} 
+\index{RequestQueue@{RequestQueue}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!RequestQueue@{RequestQueue}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRequest}{Request}} $\ast$ Request\+Queue\+::dequeue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Dequeues a \mbox{\hyperlink{structRequest}{Request}} object from the front of the queue for processing. The method returns a pointer to the \mbox{\hyperlink{structRequest}{Request}} object that is being processed, or nullptr if the queue is empty. \begin{DoxyReturn}{Returns}
+A pointer to the \mbox{\hyperlink{structRequest}{Request}} object at the front of the queue, or nullptr if the queue is empty. The caller is responsible for managing the memory of the returned \mbox{\hyperlink{structRequest}{Request}} object, as it will be processed and deleted by the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}. This method removes and returns the \mbox{\hyperlink{structRequest}{Request}} pointer at the front of the internal queue, allowing it to be processed by a server in the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}. If the queue is empty, it returns nullptr to indicate that there are no requests to process. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRequestQueue_aaba0cd9ffc42a84ed759ffde763792d1}\label{classRequestQueue_aaba0cd9ffc42a84ed759ffde763792d1}} 
+\index{RequestQueue@{RequestQueue}!empty@{empty}}
+\index{empty@{empty}!RequestQueue@{RequestQueue}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Request\+Queue\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the queue is empty, indicating that there are no requests waiting to be processed. \begin{DoxyReturn}{Returns}
+true if the queue is empty, false otherwise. This method allows the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} to determine if there are any pending requests that need to be processed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRequestQueue_a0ed46d23990229662bd70d8a786379ef}\label{classRequestQueue_a0ed46d23990229662bd70d8a786379ef}} 
+\index{RequestQueue@{RequestQueue}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!RequestQueue@{RequestQueue}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily void Request\+Queue\+::enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structRequest}{Request}} $\ast$}]{r }\end{DoxyParamCaption})}
+
+Enqueues a new \mbox{\hyperlink{structRequest}{Request}} object into the queue. The request is added to the back of the queue, following the First-\/\+In-\/\+First-\/\+Out (FIFO) principle. 
+\begin{DoxyParams}{Parameters}
+{\em r} & A pointer to the \mbox{\hyperlink{structRequest}{Request}} object to be enqueued. The caller is responsible for managing the memory of the \mbox{\hyperlink{structRequest}{Request}} object, as it will be processed and deleted by the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}. This method adds the given \mbox{\hyperlink{structRequest}{Request}} pointer to the end of the internal queue, allowing it to be processed in order as requests are dequeued. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRequestQueue_ac2a2a546ac5579e45ca11f433a8a804c}\label{classRequestQueue_ac2a2a546ac5579e45ca11f433a8a804c}} 
+\index{RequestQueue@{RequestQueue}!size@{size}}
+\index{size@{size}!RequestQueue@{RequestQueue}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Request\+Queue\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the current size of the queue, indicating how many requests are waiting to be processed. \begin{DoxyReturn}{Returns}
+The number of \mbox{\hyperlink{structRequest}{Request}} objects currently in the queue. This method allows the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} to monitor the load on the system and make decisions about scaling servers based on the number of pending requests. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

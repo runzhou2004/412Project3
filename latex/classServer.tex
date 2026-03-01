@@ -1,27 +1,93 @@
 \hypertarget{classServer}{}\doxysection{Server Class Reference}
 \label{classServer}\index{Server@{Server}}
+
+
+The \mbox{\hyperlink{classServer}{Server}} class represents a server in the load balancing system, responsible for processing incoming requests. Each \mbox{\hyperlink{classServer}{Server}} object maintains its own state, including whether it is currently busy, the request it is processing, and the time remaining to complete the request. The \mbox{\hyperlink{classServer}{Server}} class provides methods to assign a new request to the server, process a cycle of work on the current request, check if the server is idle or done with its current request, and clear the completed request from the server\textquotesingle{}s state. This class is used by the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} to manage the processing of requests across multiple servers and to determine when to scale up or down the number of active servers based on the load.  
+
+
+
+
+{\ttfamily \#include $<$Server.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classServer_a6940a39aea3aace4fa532676b39fc84f}\label{classServer_a6940a39aea3aace4fa532676b39fc84f}} 
-{\bfseries Server} (int id)
+\mbox{\hyperlink{classServer_a6940a39aea3aace4fa532676b39fc84f}{Server}} (int id)
 \item 
-\mbox{\Hypertarget{classServer_a05b1c6e4311d128e8691305ab74f7d48}\label{classServer_a05b1c6e4311d128e8691305ab74f7d48}} 
-bool {\bfseries is\+Idle} ()
+\mbox{\hyperlink{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}{$\sim$\+Server}} ()
 \item 
-\mbox{\Hypertarget{classServer_a6a730de24647257add37cda2257a0875}\label{classServer_a6a730de24647257add37cda2257a0875}} 
-void {\bfseries assign} (\mbox{\hyperlink{structRequest}{Request}} $\ast$r)
+bool \mbox{\hyperlink{classServer_a05b1c6e4311d128e8691305ab74f7d48}{is\+Idle}} ()
 \item 
-\mbox{\Hypertarget{classServer_a81b1df3f16eb039daf83734ba26f3313}\label{classServer_a81b1df3f16eb039daf83734ba26f3313}} 
-void {\bfseries process\+Cycle} ()
+void \mbox{\hyperlink{classServer_a6a730de24647257add37cda2257a0875}{assign}} (\mbox{\hyperlink{structRequest}{Request}} $\ast$r)
 \item 
-\mbox{\Hypertarget{classServer_a166278ba36e8ff582ab594b07d33529f}\label{classServer_a166278ba36e8ff582ab594b07d33529f}} 
-bool {\bfseries is\+Done} ()
+void \mbox{\hyperlink{classServer_a81b1df3f16eb039daf83734ba26f3313}{process\+Cycle}} ()
 \item 
-\mbox{\Hypertarget{classServer_ab15792aee517add66b1d3058e8875b83}\label{classServer_ab15792aee517add66b1d3058e8875b83}} 
-void {\bfseries clear} ()
+bool \mbox{\hyperlink{classServer_a166278ba36e8ff582ab594b07d33529f}{is\+Done}} ()
+\item 
+void \mbox{\hyperlink{classServer_ab15792aee517add66b1d3058e8875b83}{clear}} ()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classServer}{Server}} class represents a server in the load balancing system, responsible for processing incoming requests. Each \mbox{\hyperlink{classServer}{Server}} object maintains its own state, including whether it is currently busy, the request it is processing, and the time remaining to complete the request. The \mbox{\hyperlink{classServer}{Server}} class provides methods to assign a new request to the server, process a cycle of work on the current request, check if the server is idle or done with its current request, and clear the completed request from the server\textquotesingle{}s state. This class is used by the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} to manage the processing of requests across multiple servers and to determine when to scale up or down the number of active servers based on the load. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classServer_a6940a39aea3aace4fa532676b39fc84f}\label{classServer_a6940a39aea3aace4fa532676b39fc84f}} 
+\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily Server\+::\+Server (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier for the server. This ID can be used for logging and tracking purposes within the load balancing system. The constructor initializes the server\textquotesingle{}s state to idle (is\+Busy = false), sets the current request pointer to nullptr, and initializes the time remaining to process a request to zero. This ensures that when a \mbox{\hyperlink{classServer}{Server}} object is created, it starts in a ready state, waiting to be assigned a request for processing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}\label{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}} 
+\index{Server@{Server}!````~Server@{$\sim$Server}}
+\index{````~Server@{$\sim$Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{$\sim$Server()}{~Server()}}
+{\footnotesize\ttfamily Server\+::$\sim$\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The destructor for the \mbox{\hyperlink{classServer}{Server}} class is responsible for cleaning up any resources used by the \mbox{\hyperlink{classServer}{Server}} object, such as the current request being processed. If the server is currently busy processing a request (i.\+e., curr\+Req is not nullptr), the destructor will delete the \mbox{\hyperlink{structRequest}{Request}} object to free up memory and prevent memory leaks. This ensures that when a \mbox{\hyperlink{classServer}{Server}} object is destroyed, it properly releases any resources it was using, maintaining good memory management practices in the load balancing system. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classServer_a6a730de24647257add37cda2257a0875}\label{classServer_a6a730de24647257add37cda2257a0875}} 
+\index{Server@{Server}!assign@{assign}}
+\index{assign@{assign}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{assign()}{assign()}}
+{\footnotesize\ttfamily void Server\+::assign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structRequest}{Request}} $\ast$}]{r }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & A pointer to the \mbox{\hyperlink{structRequest}{Request}} object to be processed by the server. The caller is responsible for managing the memory of the \mbox{\hyperlink{structRequest}{Request}} object, as it will be processed and deleted by the \mbox{\hyperlink{classServer}{Server}}. This method sets the server\textquotesingle{}s state to busy, assigns the given \mbox{\hyperlink{structRequest}{Request}} pointer to the server\textquotesingle{}s current request, and initializes the time remaining to process the request based on the time specified in the \mbox{\hyperlink{structRequest}{Request}} object. The \mbox{\hyperlink{classServer}{Server}} will then process this request over subsequent cycles until it is completed, at which point it can be cleared and made idle again. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_ab15792aee517add66b1d3058e8875b83}\label{classServer_ab15792aee517add66b1d3058e8875b83}} 
+\index{Server@{Server}!clear@{clear}}
+\index{clear@{clear}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Server\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clears the completed request from the server\textquotesingle{}s state, marking it as idle and resetting the time. This method should be called by the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} when a server has finished processing its current request (as determined by the is\+Done method) to reset the server\textquotesingle{}s state and allow it to accept new requests. The method deletes the current \mbox{\hyperlink{structRequest}{Request}} object being processed by the server to free up memory and sets the server\textquotesingle{}s state to idle, allowing it to be assigned a new request in subsequent cycles. \mbox{\Hypertarget{classServer_a166278ba36e8ff582ab594b07d33529f}\label{classServer_a166278ba36e8ff582ab594b07d33529f}} 
+\index{Server@{Server}!isDone@{isDone}}
+\index{isDone@{isDone}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{isDone()}{isDone()}}
+{\footnotesize\ttfamily bool Server\+::is\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the server has completed processing its current request. If the server is busy and the time remaining to complete the request has reached zero, this method returns true, indicating that the request is done and the server can be cleared. Otherwise, it returns false. This method allows the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} to determine when a server has finished processing its current request \mbox{\Hypertarget{classServer_a05b1c6e4311d128e8691305ab74f7d48}\label{classServer_a05b1c6e4311d128e8691305ab74f7d48}} 
+\index{Server@{Server}!isIdle@{isIdle}}
+\index{isIdle@{isIdle}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{isIdle()}{isIdle()}}
+{\footnotesize\ttfamily bool Server\+::is\+Idle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the server is currently idle, meaning it is not processing any request. This method returns true if the server is idle (i.\+e., not busy), and false if the server is currently processing a request. The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} can use this method to determine if a server is available to be assigned a new request. \mbox{\Hypertarget{classServer_a81b1df3f16eb039daf83734ba26f3313}\label{classServer_a81b1df3f16eb039daf83734ba26f3313}} 
+\index{Server@{Server}!processCycle@{processCycle}}
+\index{processCycle@{processCycle}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{processCycle()}{processCycle()}}
+{\footnotesize\ttfamily void Server\+::process\+Cycle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Processes a cycle of work on the current request. If the server is busy processing a request, this method decrements the time remaining to complete the request. If the time reaches zero, the request is considered done, and the server can be cleared and made idle again. This method should be called by the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} during each cycle of processing to simulate the 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

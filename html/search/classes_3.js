@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['server_17',['Server',['../classServer.html',1,'']]]
+  ['request_30',['Request',['../structRequest.html',1,'']]],
+  ['requestqueue_31',['RequestQueue',['../classRequestQueue.html',1,'']]]
 ];

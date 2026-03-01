@@ -73,19 +73,22 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classRequestQueue.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRequestQueue.html">RequestQueue</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        queue&lt;Request*&gt; q;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">void</span> enqueue(<a class="code" href="structRequest.html">Request</a>* r);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="structRequest.html">Request</a>* dequeue();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">bool</span> empty();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">int</span> size();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassRequestQueue_html"><div class="ttname"><a href="classRequestQueue.html">RequestQueue</a></div><div class="ttdef"><b>Definition:</b> RequestQueue.h:9</div></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classRequestQueue.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRequestQueue.html">RequestQueue</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        queue&lt;Request*&gt; q;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> enqueue(<a class="code" href="structRequest.html">Request</a>* r);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="structRequest.html">Request</a>* dequeue();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">bool</span> empty();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">int</span> size();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassRequestQueue_html"><div class="ttname"><a href="classRequestQueue.html">RequestQueue</a></div><div class="ttdoc">The RequestQueue class manages a queue of Request objects, providing methods to enqueue new requests,...</div><div class="ttdef"><b>Definition:</b> RequestQueue.h:15</div></div>
 <div class="ttc" id="astructRequest_html"><div class="ttname"><a href="structRequest.html">Request</a></div><div class="ttdoc">The Request struct represents an incoming request to the load balancer, containing information about ...</div><div class="ttdef"><b>Definition:</b> Request.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

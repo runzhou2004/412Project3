@@ -68,28 +68,171 @@ $(function() {
 <div class="title">Server Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a> class represents a server in the load balancing system, responsible for processing incoming requests. Each <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a> object maintains its own state, including whether it is currently busy, the request it is processing, and the time remaining to complete the request. The <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a> class provides methods to assign a new request to the server, process a cycle of work on the current request, check if the server is idle or done with its current request, and clear the completed request from the server's state. This class is used by the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> to manage the processing of requests across multiple servers and to determine when to scale up or down the number of active servers based on the load.  
+ <a href="classServer.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Server_8h_source.html">Server.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6940a39aea3aace4fa532676b39fc84f"><td class="memItemLeft" align="right" valign="top"><a id="a6940a39aea3aace4fa532676b39fc84f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Server</b> (int id)</td></tr>
+<tr class="memitem:a6940a39aea3aace4fa532676b39fc84f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a6940a39aea3aace4fa532676b39fc84f">Server</a> (int id)</td></tr>
 <tr class="separator:a6940a39aea3aace4fa532676b39fc84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05b1c6e4311d128e8691305ab74f7d48"><td class="memItemLeft" align="right" valign="top"><a id="a05b1c6e4311d128e8691305ab74f7d48"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isIdle</b> ()</td></tr>
+<tr class="memitem:a4b3aa2579cb1c8cd1d069582c14d0fa6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a4b3aa2579cb1c8cd1d069582c14d0fa6">~Server</a> ()</td></tr>
+<tr class="separator:a4b3aa2579cb1c8cd1d069582c14d0fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b1c6e4311d128e8691305ab74f7d48"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a05b1c6e4311d128e8691305ab74f7d48">isIdle</a> ()</td></tr>
 <tr class="separator:a05b1c6e4311d128e8691305ab74f7d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a730de24647257add37cda2257a0875"><td class="memItemLeft" align="right" valign="top"><a id="a6a730de24647257add37cda2257a0875"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>assign</b> (<a class="el" href="structRequest.html">Request</a> *r)</td></tr>
+<tr class="memitem:a6a730de24647257add37cda2257a0875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a6a730de24647257add37cda2257a0875">assign</a> (<a class="el" href="structRequest.html">Request</a> *r)</td></tr>
 <tr class="separator:a6a730de24647257add37cda2257a0875"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81b1df3f16eb039daf83734ba26f3313"><td class="memItemLeft" align="right" valign="top"><a id="a81b1df3f16eb039daf83734ba26f3313"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>processCycle</b> ()</td></tr>
+<tr class="memitem:a81b1df3f16eb039daf83734ba26f3313"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a81b1df3f16eb039daf83734ba26f3313">processCycle</a> ()</td></tr>
 <tr class="separator:a81b1df3f16eb039daf83734ba26f3313"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a166278ba36e8ff582ab594b07d33529f"><td class="memItemLeft" align="right" valign="top"><a id="a166278ba36e8ff582ab594b07d33529f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDone</b> ()</td></tr>
+<tr class="memitem:a166278ba36e8ff582ab594b07d33529f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a166278ba36e8ff582ab594b07d33529f">isDone</a> ()</td></tr>
 <tr class="separator:a166278ba36e8ff582ab594b07d33529f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab15792aee517add66b1d3058e8875b83"><td class="memItemLeft" align="right" valign="top"><a id="ab15792aee517add66b1d3058e8875b83"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="memitem:ab15792aee517add66b1d3058e8875b83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#ab15792aee517add66b1d3058e8875b83">clear</a> ()</td></tr>
 <tr class="separator:ab15792aee517add66b1d3058e8875b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a> class represents a server in the load balancing system, responsible for processing incoming requests. Each <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a> object maintains its own state, including whether it is currently busy, the request it is processing, and the time remaining to complete the request. The <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a> class provides methods to assign a new request to the server, process a cycle of work on the current request, check if the server is idle or done with its current request, and clear the completed request from the server's state. This class is used by the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> to manage the processing of requests across multiple servers and to determine when to scale up or down the number of active servers based on the load. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6940a39aea3aace4fa532676b39fc84f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6940a39aea3aace4fa532676b39fc84f">&#9670;&nbsp;</a></span>Server()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Server::Server </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The unique identifier for the server. This ID can be used for logging and tracking purposes within the load balancing system. The constructor initializes the server's state to idle (isBusy = false), sets the current request pointer to nullptr, and initializes the time remaining to process a request to zero. This ensures that when a <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a> object is created, it starts in a ready state, waiting to be assigned a request for processing. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4b3aa2579cb1c8cd1d069582c14d0fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b3aa2579cb1c8cd1d069582c14d0fa6">&#9670;&nbsp;</a></span>~Server()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Server::~Server </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The destructor for the <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a> class is responsible for cleaning up any resources used by the <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a> object, such as the current request being processed. If the server is currently busy processing a request (i.e., currReq is not nullptr), the destructor will delete the <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> object to free up memory and prevent memory leaks. This ensures that when a <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a> object is destroyed, it properly releases any resources it was using, maintaining good memory management practices in the load balancing system. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6a730de24647257add37cda2257a0875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a730de24647257add37cda2257a0875">&#9670;&nbsp;</a></span>assign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::assign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRequest.html">Request</a> *&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>A pointer to the <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> object to be processed by the server. The caller is responsible for managing the memory of the <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> object, as it will be processed and deleted by the <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a>. This method sets the server's state to busy, assigns the given <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> pointer to the server's current request, and initializes the time remaining to process the request based on the time specified in the <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> object. The <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a> will then process this request over subsequent cycles until it is completed, at which point it can be cleared and made idle again. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab15792aee517add66b1d3058e8875b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab15792aee517add66b1d3058e8875b83">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clears the completed request from the server's state, marking it as idle and resetting the time. This method should be called by the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> when a server has finished processing its current request (as determined by the isDone method) to reset the server's state and allow it to accept new requests. The method deletes the current <a class="el" href="structRequest.html" title="The Request struct represents an incoming request to the load balancer, containing information about ...">Request</a> object being processed by the server to free up memory and sets the server's state to idle, allowing it to be assigned a new request in subsequent cycles. </p>
+
+</div>
+</div>
+<a id="a166278ba36e8ff582ab594b07d33529f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a166278ba36e8ff582ab594b07d33529f">&#9670;&nbsp;</a></span>isDone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Server::isDone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if the server has completed processing its current request. If the server is busy and the time remaining to complete the request has reached zero, this method returns true, indicating that the request is done and the server can be cleared. Otherwise, it returns false. This method allows the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> to determine when a server has finished processing its current request </p>
+
+</div>
+</div>
+<a id="a05b1c6e4311d128e8691305ab74f7d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05b1c6e4311d128e8691305ab74f7d48">&#9670;&nbsp;</a></span>isIdle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Server::isIdle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if the server is currently idle, meaning it is not processing any request. This method returns true if the server is idle (i.e., not busy), and false if the server is currently processing a request. The <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> can use this method to determine if a server is available to be assigned a new request. </p>
+
+</div>
+</div>
+<a id="a81b1df3f16eb039daf83734ba26f3313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81b1df3f16eb039daf83734ba26f3313">&#9670;&nbsp;</a></span>processCycle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::processCycle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Processes a cycle of work on the current request. If the server is busy processing a request, this method decrements the time remaining to complete the request. If the time reaches zero, the request is considered done, and the server can be cleared and made idle again. This method should be called by the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> during each cycle of processing to simulate the </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="Server_8h_source.html">Server.h</a></li>
 <li>Server.cpp</li>

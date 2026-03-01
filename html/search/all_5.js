@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['scaleservers_10',['scaleServers',['../classLoadBalancer.html#a27ac46f6a79556fda93e49dfc3b9d041',1,'LoadBalancer']]],
-  ['server_11',['Server',['../classServer.html',1,'']]]
+  ['ipblocker_10',['IPBlocker',['../classIPBlocker.html',1,'']]],
+  ['isblocked_11',['isBlocked',['../classIPBlocker.html#ace294f078c0c69c5411cc4d43e6df578',1,'IPBlocker']]],
+  ['isdone_12',['isDone',['../classServer.html#a166278ba36e8ff582ab594b07d33529f',1,'Server']]],
+  ['isidle_13',['isIdle',['../classServer.html#a05b1c6e4311d128e8691305ab74f7d48',1,'Server']]]
 ];

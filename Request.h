@@ -17,6 +17,7 @@ struct Request {
     int time;
     char jobType;
 
+    // Constructor to initialize a Request object with the given parameters.
     Request(string in, string out, int time, char type)
         : ipIn(in), ipOut(out), time(time), jobType(type) {}
 };

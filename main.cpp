@@ -49,16 +49,27 @@ int main() {
         processingLB.processCycle();
         streamingLB.processCycle();
 
-        cout << "Cycle: " << t+1 << endl;
-        cout << "Processing Servers: " << processingLB.getServerCount() << endl;
-        cout << "Processing Queue: " << processingLB.getQueueSize() << endl;
-        cout << "Streaming Servers: " << streamingLB.getServerCount() << endl;
-        cout << "Streaming Queue: " << streamingLB.getQueueSize() << endl;
-        logFile << "Cycle: " << t+1 << endl;
-        logFile << "Processing Servers: " << processingLB.getServerCount() << endl;
-        logFile << "Processing Queue: " << processingLB.getQueueSize() << endl;
-        logFile << "Streaming Servers: " << streamingLB.getServerCount() << endl;
-        logFile << "Streaming Queue: " << streamingLB.getQueueSize() << endl;
+        // cout << "Cycle: " << t+1 << endl;
+        // cout << "Processing Servers: " << processingLB.getServerCount() << endl;
+        // cout << "Processing Queue: " << processingLB.getQueueSize() << endl;
+        // cout << "Streaming Servers: " << streamingLB.getServerCount() << endl;
+        // cout << "Streaming Queue: " << streamingLB.getQueueSize() << endl;
+        // logFile << "Cycle: " << t+1 << endl;
+        // logFile << "Processing Servers: " << processingLB.getServerCount() << endl;
+        // logFile << "Processing Queue: " << processingLB.getQueueSize() << endl;
+        // logFile << "Streaming Servers: " << streamingLB.getServerCount() << endl;
+        // logFile << "Streaming Queue: " << streamingLB.getQueueSize() << endl;
     }
+        logFile << "Runtime Cycles: " << runtime << endl;
+        logFile << "Total Requests Generated: " << processingLB.getGeneratedRequests() + streamingLB.getGeneratedRequests() << endl;
+        logFile << "Total Requests Processed: " << processingLB.getProcessedRequests() + streamingLB.getProcessedRequests() << endl;
+        logFile << "Total Servers Added (Processing): " << processingLB.getServersAdded() << endl;
+        logFile << "Total Servers Removed (Processing): " << processingLB.getServersRemoved() << endl;
+        logFile << "Total Servers Added (Streaming): " << streamingLB.getServersAdded() << endl;
+        logFile << "Total Servers Removed (Streaming): " << streamingLB.getServersRemoved() << endl;
+        logFile << "Max Queue Size (Processing): " << processingLB.getMaxQueueSize() << endl;
+        logFile << "Max Queue Size (Streaming): " << streamingLB.getMaxQueueSize() << endl;
+        logFile << "Total Blocked Requests: " << processingLB.getGeneratedRequests() + streamingLB.getGeneratedRequests() - (processingLB.getProcessedRequests() + streamingLB.getProcessedRequests()) << endl;
+    
     logFile.close();
 }

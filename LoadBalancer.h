@@ -64,6 +64,12 @@ class LoadBalancer {
          * @return The number of requests in the queue.
          */
         int getQueueSize();
+
+        int getGeneratedRequests();
+        int getProcessedRequests();
+        int getServersAdded();
+        int getServersRemoved();
+        int getMaxQueueSize();
 };
 
 #endif

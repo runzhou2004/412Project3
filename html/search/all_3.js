@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['processcycle_5',['processCycle',['../classLoadBalancer.html#a6bce6a222885011f395aaa71fcd72bfd',1,'LoadBalancer']]],
-  ['processservers_6',['processServers',['../classLoadBalancer.html#af5b99b2c69d79311f1ec034df9cc009c',1,'LoadBalancer']]]
+  ['empty_5',['empty',['../classRequestQueue.html#aaba0cd9ffc42a84ed759ffde763792d1',1,'RequestQueue']]],
+  ['enqueue_6',['enqueue',['../classRequestQueue.html#a0ed46d23990229662bd70d8a786379ef',1,'RequestQueue']]]
 ];

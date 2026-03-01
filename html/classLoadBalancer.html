@@ -81,7 +81,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a357318c99ac50f2251d055e1b16f1b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69951a7bb77be7fafd4d5ad6919abd80"><td class="memItemLeft" align="right" valign="top"><a id="a69951a7bb77be7fafd4d5ad6919abd80"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLoadBalancer.html#a69951a7bb77be7fafd4d5ad6919abd80">~LoadBalancer</a> ()</td></tr>
-<tr class="memdesc:a69951a7bb77be7fafd4d5ad6919abd80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> class, responsible for cleaning up dynamically allocated <a class="el" href="classServer.html">Server</a> objects. <br /></td></tr>
+<tr class="memdesc:a69951a7bb77be7fafd4d5ad6919abd80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> class, responsible for cleaning up dynamically allocated <a class="el" href="classServer.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin...">Server</a> objects. <br /></td></tr>
 <tr class="separator:a69951a7bb77be7fafd4d5ad6919abd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef12c0a9d4d114db2b8fda090adaeff4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLoadBalancer.html#aef12c0a9d4d114db2b8fda090adaeff4">generateReq</a> (<a class="el" href="structRequest.html">Request</a> *r)</td></tr>
 <tr class="memdesc:aef12c0a9d4d114db2b8fda090adaeff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a new request and adds it to the queue if the source IP is not blocked. If the IP is blocked, the request is discarded.  <a href="classLoadBalancer.html#aef12c0a9d4d114db2b8fda090adaeff4">More...</a><br /></td></tr>
@@ -104,6 +104,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ac104e708c3d8a6984122d9a0df13b80b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLoadBalancer.html#ac104e708c3d8a6984122d9a0df13b80b">getQueueSize</a> ()</td></tr>
 <tr class="memdesc:ac104e708c3d8a6984122d9a0df13b80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current size of the request queue.  <a href="classLoadBalancer.html#ac104e708c3d8a6984122d9a0df13b80b">More...</a><br /></td></tr>
 <tr class="separator:ac104e708c3d8a6984122d9a0df13b80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96335515f3de4172559b775bea779ae"><td class="memItemLeft" align="right" valign="top"><a id="ac96335515f3de4172559b775bea779ae"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getGeneratedRequests</b> ()</td></tr>
+<tr class="separator:ac96335515f3de4172559b775bea779ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b40dafecc65d8fc619813bf7b0a003b"><td class="memItemLeft" align="right" valign="top"><a id="a2b40dafecc65d8fc619813bf7b0a003b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getProcessedRequests</b> ()</td></tr>
+<tr class="separator:a2b40dafecc65d8fc619813bf7b0a003b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab836f05436be4725d57bdb9d58e02e0c"><td class="memItemLeft" align="right" valign="top"><a id="ab836f05436be4725d57bdb9d58e02e0c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getServersAdded</b> ()</td></tr>
+<tr class="separator:ab836f05436be4725d57bdb9d58e02e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa79821fd7a44509f38ddb0a933169ace"><td class="memItemLeft" align="right" valign="top"><a id="aa79821fd7a44509f38ddb0a933169ace"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getServersRemoved</b> ()</td></tr>
+<tr class="separator:aa79821fd7a44509f38ddb0a933169ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d81d37671a5fe3d1fb0182e4416fe7"><td class="memItemLeft" align="right" valign="top"><a id="a60d81d37671a5fe3d1fb0182e4416fe7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxQueueSize</b> ()</td></tr>
+<tr class="separator:a60d81d37671a5fe3d1fb0182e4416fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> class manages a pool of servers, a queue of incoming requests, and an IP blocker to handle traffic. It can generate requests, process them through the servers, and dynamically scale the number of servers based on the current load (queue size). The <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> also implements a cooldown mechanism to prevent rapid scaling of servers. It provides methods to get the current number of servers and the size of the request queue for monitoring purposes. The <a class="el" href="classLoadBalancer.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ...">LoadBalancer</a> is designed to efficiently distribute incoming requests while maintaining performance and resource utilization. </p>

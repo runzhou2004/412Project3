@@ -1,0 +1,57 @@
+\hypertarget{classSwitch}{}\doxysection{Switch Class Reference}
+\label{classSwitch}\index{Switch@{Switch}}
+
+
+The \mbox{\hyperlink{classSwitch}{Switch}} class is responsible for routing incoming requests to the appropriate \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} based on the type of job specified in the \mbox{\hyperlink{structRequest}{Request}} object. It maintains pointers to both the processing and streaming Load\+Balancers and provides a method to route requests accordingly. The \mbox{\hyperlink{classSwitch}{Switch}} class serves as a central component in the load balancing system, directing traffic to the correct \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} based on the job type (e.\+g., \textquotesingle{}P\textquotesingle{} for processing or \textquotesingle{}S\textquotesingle{} for streaming). This allows for efficient handling of different types of requests and helps to optimize the performance of the overall system.  
+
+
+
+
+{\ttfamily \#include $<$Switch.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSwitch_ac1e3ac7956267d1c5a48a0716b19432d}{Switch}} (\mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} $\ast$p, \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} $\ast$s)
+\item 
+void \mbox{\hyperlink{classSwitch_a8883f3cb6f20f5a8443541cc81695f52}{route\+Request}} (\mbox{\hyperlink{structRequest}{Request}} $\ast$r)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classSwitch}{Switch}} class is responsible for routing incoming requests to the appropriate \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} based on the type of job specified in the \mbox{\hyperlink{structRequest}{Request}} object. It maintains pointers to both the processing and streaming Load\+Balancers and provides a method to route requests accordingly. The \mbox{\hyperlink{classSwitch}{Switch}} class serves as a central component in the load balancing system, directing traffic to the correct \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} based on the job type (e.\+g., \textquotesingle{}P\textquotesingle{} for processing or \textquotesingle{}S\textquotesingle{} for streaming). This allows for efficient handling of different types of requests and helps to optimize the performance of the overall system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSwitch_ac1e3ac7956267d1c5a48a0716b19432d}\label{classSwitch_ac1e3ac7956267d1c5a48a0716b19432d}} 
+\index{Switch@{Switch}!Switch@{Switch}}
+\index{Switch@{Switch}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{Switch()}{Switch()}}
+{\footnotesize\ttfamily Switch\+::\+Switch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & A pointer to the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} responsible for processing requests (job type \textquotesingle{}P\textquotesingle{}). \\
+\hline
+{\em s} & A pointer to the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} responsible for streaming requests (job type \textquotesingle{}S\textquotesingle{}). The constructor initializes the \mbox{\hyperlink{classSwitch}{Switch}} with pointers to the processing and streaming Load\+Balancers, allowing it to route requests to the appropriate \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} based on the job type specified in the \mbox{\hyperlink{structRequest}{Request}} objects \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSwitch_a8883f3cb6f20f5a8443541cc81695f52}\label{classSwitch_a8883f3cb6f20f5a8443541cc81695f52}} 
+\index{Switch@{Switch}!routeRequest@{routeRequest}}
+\index{routeRequest@{routeRequest}!Switch@{Switch}}
+\doxysubsubsection{\texorpdfstring{routeRequest()}{routeRequest()}}
+{\footnotesize\ttfamily void Switch\+::route\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structRequest}{Request}} $\ast$}]{r }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & A pointer to the \mbox{\hyperlink{structRequest}{Request}} object to be routed. The caller is responsible for managing the memory of the \mbox{\hyperlink{structRequest}{Request}} object, as it will be processed and deleted by the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}. This method checks the job type of the incoming \mbox{\hyperlink{structRequest}{Request}} and routes it to the appropriate \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}. If the job type is \textquotesingle{}P\textquotesingle{}, it calls the generate\+Req method of the processing \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}; if the job type is \textquotesingle{}S\textquotesingle{}, it calls the generate\+Req method of the streaming \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}. If the job type is not recognized, it deletes the \mbox{\hyperlink{structRequest}{Request}} object to free up memory and prevent memory leaks, as the request cannot be processed by either \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}. This method ensures that requests are directed to the correct \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} based on their job type, allowing for efficient handling of different types of requests in the system. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Switch.\+h\item 
+Switch.\+cpp\end{DoxyCompactItemize}

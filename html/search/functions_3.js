@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['scaleservers_24',['scaleServers',['../classLoadBalancer.html#a27ac46f6a79556fda93e49dfc3b9d041',1,'LoadBalancer']]]
+  ['empty_38',['empty',['../classRequestQueue.html#aaba0cd9ffc42a84ed759ffde763792d1',1,'RequestQueue']]],
+  ['enqueue_39',['enqueue',['../classRequestQueue.html#a0ed46d23990229662bd70d8a786379ef',1,'RequestQueue']]]
 ];

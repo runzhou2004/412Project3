@@ -8,7 +8,9 @@ void IPBlocker::addRange(string start, string end) {
 
 bool IPBlocker::isBlocked(string ip) {
     for (auto& r:ranges) {
-        if (ip >= r.first && ip <= r.second) return true;
+        if (ip >= r.first && ip <= r.second) {
+            return true;
+        }
     }
     return false;
 }

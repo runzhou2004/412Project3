@@ -1,0 +1,30 @@
+\hypertarget{Config_8h}{}\doxysection{Config.\+h File Reference}
+\label{Config_8h}\index{Config.h@{Config.h}}
+
+
+Header file for the \mbox{\hyperlink{classConfig}{Config}} class, responsible for loading and parsing configuration settings from a specified file. The \mbox{\hyperlink{classConfig}{Config}} class provides functionality to load configuration settings from a file, parse key-\/value pairs, and retrieve configuration values as integers or doubles with default values. It serves as a central point for managing configuration settings in the system, allowing other components to access these settings without needing to worry about file parsing or error handling.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+Include dependency graph for Config.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{Config_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classConfig}{Config}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classConfig}{Config}} class is responsible for loading and parsing configuration settings from a specified file. It provides methods to retrieve configuration values as integers or doubles, with default values if the keys are not found or if the values cannot be converted to the desired type. The class uses an unordered\+\_\+map to store key-\/value pairs of configuration settings, allowing for efficient retrieval of configuration values based on their keys. The \mbox{\hyperlink{classConfig}{Config}} class is designed to be flexible and easy to use, allowing other components of the system to access configuration settings without needing to worry about the details of file parsing or error handling. It serves as a central point for managing configuration settings, making it easier to maintain and update the system\textquotesingle{}s behavior based on different configurations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the \mbox{\hyperlink{classConfig}{Config}} class, responsible for loading and parsing configuration settings from a specified file. The \mbox{\hyperlink{classConfig}{Config}} class provides functionality to load configuration settings from a file, parse key-\/value pairs, and retrieve configuration values as integers or doubles with default values. It serves as a central point for managing configuration settings in the system, allowing other components to access these settings without needing to worry about file parsing or error handling. 
+
+The class uses an unordered\+\_\+map to store key-\/value pairs of configuration settings, enabling efficient retrieval of values based on their keys. The load method reads the configuration file line by line, ignoring comments and empty lines, and populates the internal map with the parsed settings. The get\+Int and get\+Double methods allow retrieval of configuration values as integers or doubles, returning default values if the keys are not found or if conversion fails.
+
+Overall, the \mbox{\hyperlink{classConfig}{Config}} class is designed to be flexible and easy to use, providing a simple interface for accessing configuration settings while abstracting away the complexities of file handling and parsing. 

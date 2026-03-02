@@ -1,0 +1,7 @@
+<map id="Request.h" name="Request.h">
+<area shape="rect" id="node1" title="The Request struct represents an incoming request to the load balancer, containing information about ..." alt="" coords="153,5,240,32"/>
+<area shape="rect" id="node2" href="$RequestQueue_8h.html" title="The RequestQueue class manages a queue of Request objects, providing methods to enqueue new requests,..." alt="" coords="5,80,135,107"/>
+<area shape="rect" id="node4" href="$Switch_8h.html" title="The Switch class is responsible for routing incoming requests to the appropriate LoadBalancer based o..." alt="" coords="183,229,261,256"/>
+<area shape="rect" id="node5" href="$Server_8h.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin..." alt="" coords="159,80,234,107"/>
+<area shape="rect" id="node3" href="$LoadBalancer_8h.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ..." alt="" coords="112,155,233,181"/>
+</map>

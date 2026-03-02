@@ -1,0 +1,5 @@
+<map id="Server.h" name="Server.h">
+<area shape="rect" id="node1" title="The Server class represents a server in the load balancing system, responsible for processing incomin..." alt="" coords="29,5,103,32"/>
+<area shape="rect" id="node2" href="$LoadBalancer_8h.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ..." alt="" coords="5,80,127,107"/>
+<area shape="rect" id="node3" href="$Switch_8h.html" title="The Switch class is responsible for routing incoming requests to the appropriate LoadBalancer based o..." alt="" coords="27,155,105,181"/>
+</map>

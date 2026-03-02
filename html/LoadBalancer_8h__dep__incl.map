@@ -1,0 +1,4 @@
+<map id="LoadBalancer.h" name="LoadBalancer.h">
+<area shape="rect" id="node1" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ..." alt="" coords="5,5,127,32"/>
+<area shape="rect" id="node2" href="$Switch_8h.html" title="The Switch class is responsible for routing incoming requests to the appropriate LoadBalancer based o..." alt="" coords="27,80,105,107"/>
+</map>

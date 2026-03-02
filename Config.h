@@ -1,3 +1,13 @@
+/**
+ *  \file Config.h
+ *  \brief Header file for the Config class, responsible for loading and parsing configuration settings from a specified file.
+ *  The Config class provides functionality to load configuration settings from a file, parse key-value pairs, and retrieve configuration values as integers or doubles with default values. It serves as a central point for managing configuration settings in the system, allowing other components to access these settings without needing to worry about file parsing or error handling.
+ *
+ *  The class uses an unordered_map to store key-value pairs of configuration settings, enabling efficient retrieval of values based on their keys. The load method reads the configuration file line by line, ignoring comments and empty lines, and populates the internal map with the parsed settings. The getInt and getDouble methods allow retrieval of configuration values as integers or doubles, returning default values if the keys are not found or if conversion fails.
+ *
+ *  Overall, the Config class is designed to be flexible and easy to use, providing a simple interface for accessing configuration settings while abstracting away the complexities of file handling and parsing.
+ */
+
 #ifndef CONFIG_H
 #define CONFIG_H
 

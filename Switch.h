@@ -1,3 +1,9 @@
+/**
+ * @file Switch.h
+ * @brief The Switch class is responsible for routing incoming requests to the appropriate LoadBalancer based on the type of job specified in the Request object. It maintains pointers to both the processing and streaming LoadBalancers and provides a method to route requests accordingly.
+ * The Switch class serves as a central component in the load balancing system, directing traffic to the correct LoadBalancer based on the job type (e.g., 'P' for processing or 'S' for streaming). This allows for efficient handling of different types of requests and helps to optimize the performance of the overall system.
+ */
+
 #ifndef SWITCH_H
 #define SWITCH_H
 

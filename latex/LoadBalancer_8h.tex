@@ -1,0 +1,38 @@
+\hypertarget{LoadBalancer_8h}{}\doxysection{Load\+Balancer.\+h File Reference}
+\label{LoadBalancer_8h}\index{LoadBalancer.h@{LoadBalancer.h}}
+
+
+The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} class manages a pool of servers, a queue of incoming requests, and an IP blocker to handle traffic. It can generate requests, process them through the servers, and dynamically scale the number of servers based on the current load (queue size).  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}Server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Request\+Queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}IPBlocker.\+h\char`\"{}}\newline
+Include dependency graph for Load\+Balancer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LoadBalancer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{LoadBalancer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} class manages a pool of servers, a queue of incoming requests, and an IP blocker to handle traffic. It can generate requests, process them through the servers, and dynamically scale the number of servers based on the current load (queue size). The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} also implements a cooldown mechanism to prevent rapid scaling of servers. It provides methods to get the current number of servers and the size of the request queue for monitoring purposes. The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} is designed to efficiently distribute incoming requests while maintaining performance and resource utilization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} class manages a pool of servers, a queue of incoming requests, and an IP blocker to handle traffic. It can generate requests, process them through the servers, and dynamically scale the number of servers based on the current load (queue size). 
+

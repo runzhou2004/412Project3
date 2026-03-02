@@ -1,0 +1,12 @@
+<map id="Switch.h" name="Switch.h">
+<area shape="rect" id="node1" title="The Switch class is responsible for routing incoming requests to the appropriate LoadBalancer based o..." alt="" coords="44,5,122,32"/>
+<area shape="rect" id="node2" href="$LoadBalancer_8h.html" title="The LoadBalancer class manages a pool of servers, a queue of incoming requests, and an IP blocker to ..." alt="" coords="192,80,313,107"/>
+<area shape="rect" id="node6" href="$Request_8h.html" title="The Request struct represents an incoming request to the load balancer, containing information about ..." alt="" coords="29,229,116,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="398,229,461,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="392,155,465,181"/>
+<area shape="rect" id="node5" href="$Server_8h.html" title="The Server class represents a server in the load balancing system, responsible for processing incomin..." alt="" coords="20,155,95,181"/>
+<area shape="rect" id="node8" href="$RequestQueue_8h.html" title="The RequestQueue class manages a queue of Request objects, providing methods to enqueue new requests,..." alt="" coords="120,155,249,181"/>
+<area shape="rect" id="node10" href="$IPBlocker_8h.html" title="The IPBlocker class manages a list of blocked IP address ranges and provides functionality to check i..." alt="" coords="274,155,367,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="127,304,186,331"/>
+<area shape="rect" id="node9" title=" " alt="" coords="153,229,216,256"/>
+</map>

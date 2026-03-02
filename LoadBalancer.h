@@ -1,3 +1,10 @@
+/**
+ * @file LoadBalancer.h
+ * @brief The LoadBalancer class manages a pool of servers, a queue of incoming requests,
+ * and an IP blocker to handle traffic. It can generate requests, process them through the servers,
+ * and dynamically scale the number of servers based on the current load (queue size).
+ */
+
 #ifndef LOADBALANCER_H
 #define LOADBALANCER_H
 

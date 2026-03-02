@@ -1,3 +1,10 @@
+/**
+    * @file IPBlocker.h
+    * @brief The IPBlocker class manages a list of blocked IP address ranges and provides functionality to check if a given IP address is blocked.
+    * The class allows adding ranges of IP addresses to the block list and checking if a specific IP address falls within any of the blocked ranges. It uses a vector of pairs to store the blocked IP ranges, where each pair consists of a starting IP address and an ending IP address. The isBlocked method iterates through the list of blocked ranges and checks if the given IP address falls within any of the ranges by comparing it to the start and end of each range.
+    * Note: This implementation assumes that the IP addresses are in a format that allows for simple string comparison (e.g., "
+*/
+
 #ifndef IPBLOCKER_H
 #define IPBLOCKER_H
 

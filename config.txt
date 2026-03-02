@@ -1,6 +1,6 @@
 initial_servers=10
 runtime_cycles=10000
-rest_cycles=5
+rest_cycles=2
 arrival_probability=0.2
 min_process_time=1
 max_process_time=10

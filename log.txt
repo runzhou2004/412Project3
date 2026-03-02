@@ -11,43 +11,43 @@ Streaming Servers: 11
 Streaming Queue: 990
 Completed (Streaming): 0
 ------------------------------
-[CYCLE 7] Added Server! Total Servers: 12
+[CYCLE 4] Added Server! Total Servers: 12
 ------------------------------
-[CYCLE 7] Added Server! Total Servers: 12
+[CYCLE 4] Added Server! Total Servers: 12
 ------------------------------
-[CYCLE 13] Added Server! Total Servers: 13
+[CYCLE 7] Added Server! Total Servers: 13
 ------------------------------
-[CYCLE 13] Added Server! Total Servers: 13
+[CYCLE 7] Added Server! Total Servers: 13
 ------------------------------
-[CYCLE 435] Removed Server! Total Servers: 12
+[CYCLE 443] Removed Server! Total Servers: 12
 ------------------------------
-[CYCLE 438] Removed Server! Total Servers: 11
+[CYCLE 450] Removed Server! Total Servers: 11
 ------------------------------
-[CYCLE 439] Removed Server! Total Servers: 10
+[CYCLE 451] Removed Server! Total Servers: 10
 ------------------------------
-[CYCLE 440] Removed Server! Total Servers: 9
+[CYCLE 452] Removed Server! Total Servers: 9
 ------------------------------
-[CYCLE 441] Removed Server! Total Servers: 8
+[CYCLE 453] Removed Server! Total Servers: 8
 ------------------------------
-[CYCLE 442] Removed Server! Total Servers: 7
+[CYCLE 454] Removed Server! Total Servers: 7
 ------------------------------
-[CYCLE 443] Removed Server! Total Servers: 6
+[CYCLE 455] Removed Server! Total Servers: 6
 ------------------------------
-[CYCLE 444] Removed Server! Total Servers: 5
+[CYCLE 455] Removed Server! Total Servers: 12
 ------------------------------
-[CYCLE 445] Removed Server! Total Servers: 4
+[CYCLE 456] Removed Server! Total Servers: 5
 ------------------------------
-[CYCLE 446] Removed Server! Total Servers: 3
+[CYCLE 457] Removed Server! Total Servers: 4
 ------------------------------
-[CYCLE 453] Removed Server! Total Servers: 2
+[CYCLE 458] Removed Server! Total Servers: 3
 ------------------------------
-[CYCLE 454] Removed Server! Total Servers: 1
+[CYCLE 459] Removed Server! Total Servers: 2
 ------------------------------
-[CYCLE 458] Removed Server! Total Servers: 12
+[CYCLE 460] Removed Server! Total Servers: 1
 ------------------------------
-[CYCLE 459] Removed Server! Total Servers: 11
+[CYCLE 462] Removed Server! Total Servers: 11
 ------------------------------
-[CYCLE 460] Removed Server! Total Servers: 10
+[CYCLE 463] Removed Server! Total Servers: 10
 ------------------------------
 [CYCLE 464] Removed Server! Total Servers: 9
 ------------------------------
@@ -69,108 +69,108 @@ Completed (Streaming): 0
 ------------------------------
 Cycle: 1001
 Processing Servers: 1
-Processing Queue: 18
-Completed (Processing): 1182
+Processing Queue: 26
+Completed (Processing): 1172
 Streaming Servers: 1
-Streaming Queue: 18
-Completed (Streaming): 1182
+Streaming Queue: 24
+Completed (Streaming): 1174
 ------------------------------
 Cycle: 2001
 Processing Servers: 1
-Processing Queue: 46
-Completed (Processing): 1363
+Processing Queue: 56
+Completed (Processing): 1362
 Streaming Servers: 1
-Streaming Queue: 44
-Completed (Streaming): 1365
+Streaming Queue: 67
+Completed (Streaming): 1351
+------------------------------
+[CYCLE 2507] Added Server! Total Servers: 2
+------------------------------
+[CYCLE 2796] Added Server! Total Servers: 2
+------------------------------
+[CYCLE 2989] Removed Server! Total Servers: 1
 ------------------------------
 Cycle: 3001
-Processing Servers: 1
-Processing Queue: 51
-Completed (Processing): 1549
+Processing Servers: 2
+Processing Queue: 35
+Completed (Processing): 1580
 Streaming Servers: 1
-Streaming Queue: 51
-Completed (Streaming): 1549
+Streaming Queue: 0
+Completed (Streaming): 1617
+------------------------------
+[CYCLE 3194] Removed Server! Total Servers: 1
 ------------------------------
 Cycle: 4001
 Processing Servers: 1
-Processing Queue: 49
-Completed (Processing): 1735
+Processing Queue: 24
+Completed (Processing): 1795
 Streaming Servers: 1
-Streaming Queue: 49
-Completed (Streaming): 1735
+Streaming Queue: 27
+Completed (Streaming): 1792
 ------------------------------
 Cycle: 5001
 Processing Servers: 1
-Processing Queue: 65
-Completed (Processing): 1908
+Processing Queue: 40
+Completed (Processing): 1980
 Streaming Servers: 1
-Streaming Queue: 61
-Completed (Streaming): 1912
+Streaming Queue: 60
+Completed (Streaming): 1960
 ------------------------------
-[CYCLE 5420] Added Server! Total Servers: 2
+[CYCLE 5319] Added Server! Total Servers: 2
 ------------------------------
-[CYCLE 5554] Added Server! Total Servers: 2
-------------------------------
-[CYCLE 5880] Removed Server! Total Servers: 1
+[CYCLE 5843] Removed Server! Total Servers: 1
 ------------------------------
 Cycle: 6001
 Processing Servers: 1
-Processing Queue: 4
-Completed (Processing): 2170
-Streaming Servers: 2
-Streaming Queue: 4
-Completed (Streaming): 2169
-------------------------------
-[CYCLE 6032] Removed Server! Total Servers: 1
+Processing Queue: 71
+Completed (Processing): 2161
+Streaming Servers: 1
+Streaming Queue: 1
+Completed (Streaming): 2231
 ------------------------------
 Cycle: 7001
 Processing Servers: 1
-Processing Queue: 17
-Completed (Processing): 2350
+Processing Queue: 73
+Completed (Processing): 2345
 Streaming Servers: 1
-Streaming Queue: 3
-Completed (Streaming): 2364
+Streaming Queue: 2
+Completed (Streaming): 2416
+------------------------------
+[CYCLE 7235] Added Server! Total Servers: 2
+------------------------------
+[CYCLE 7769] Removed Server! Total Servers: 1
 ------------------------------
 Cycle: 8001
 Processing Servers: 1
-Processing Queue: 71
-Completed (Processing): 2528
+Processing Queue: 18
+Completed (Processing): 2621
 Streaming Servers: 1
-Streaming Queue: 61
-Completed (Streaming): 2538
-------------------------------
-[CYCLE 8497] Added Server! Total Servers: 2
-------------------------------
-[CYCLE 8952] Removed Server! Total Servers: 1
+Streaming Queue: 34
+Completed (Streaming): 2605
 ------------------------------
 Cycle: 9001
 Processing Servers: 1
-Processing Queue: 4
-Completed (Processing): 2786
+Processing Queue: 45
+Completed (Processing): 2799
 Streaming Servers: 1
-Streaming Queue: 68
-Completed (Streaming): 2722
-------------------------------
-[CYCLE 9444] Added Server! Total Servers: 2
-------------------------------
-[CYCLE 9963] Removed Server! Total Servers: 1
+Streaming Queue: 61
+Completed (Streaming): 2783
 ==============================
 Summary:
 Initial Servers (Processing): 10
 Initial Servers (Streaming): 10
 Runtime Cycles: 10000
-Rest Cycles: 5
+Rest Cycles: 2
 ------------------------------
 Starting Queue Size (Processing): 0
 Starting Queue Size (Streaming): 0
 ------------------------------
-Final Queue Size (Processing): 27
-Final Queue Size (Streaming): 1
+Final Queue Size (Processing): 65
+Final Queue Size (Streaming): 68
 ------------------------------
 Range for task times: 1-10 cycles
 ------------------------------
-Total Requests Generated: 5990
-Total Requests Processed: 5960
+Total Requests Generated: 6084
+Total Requests Processed: 5949
 Total Blocked Requests: 0
 ------------------------------
 Total Servers Added (Processing): 5

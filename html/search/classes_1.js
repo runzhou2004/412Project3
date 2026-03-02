@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ipblocker_28',['IPBlocker',['../classIPBlocker.html',1,'']]]
+  ['ipblocker_40',['IPBlocker',['../classIPBlocker.html',1,'']]]
 ];

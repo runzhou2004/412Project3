@@ -1,29 +1,133 @@
 \hypertarget{classConfig}{}\doxysection{Config Class Reference}
 \label{classConfig}\index{Config@{Config}}
+
+
+The \mbox{\hyperlink{classConfig}{Config}} class is responsible for loading and parsing configuration settings from a specified file. It provides methods to retrieve configuration values as integers or doubles, with default values if the keys are not found or if the values cannot be converted to the desired type. The class uses an unordered\+\_\+map to store key-\/value pairs of configuration settings, allowing for efficient retrieval of configuration values based on their keys. The \mbox{\hyperlink{classConfig}{Config}} class is designed to be flexible and easy to use, allowing other components of the system to access configuration settings without needing to worry about the details of file parsing or error handling. It serves as a central point for managing configuration settings, making it easier to maintain and update the system\textquotesingle{}s behavior based on different configurations.  
+
+
+
+
+{\ttfamily \#include $<$Config.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classConfig_a17adec3505bfe36f9997021af375fbdb}{Config}} (const string \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classConfig}{Config}} object by loading configuration settings from the specified file path. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classConfig_aa36b24fef004dc7e61d6c94a987b3064}{get\+Initial\+Servers}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the initial number of servers to be used in the load balancer, as specified in the configuration file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classConfig_a8d7b483f6e9ceae9cfbb2beb47b4996f}{get\+Runtime}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the total runtime in cycles for the load balancer, as specified in the configuration file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classConfig_aad5e8f8380deecdbafa3f7c82003f31e}{get\+Rest\+Cycles}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the number of rest cycles to be used as a cooldown period for scaling servers in the load balancer, as specified in the configuration file. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classConfig_af7772a1a58df54d712d7f0ec7bfb4f33}{get\+Arrival\+Probability}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the probability of request arrival, as specified in the configuration file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classConfig_af8d03201afc96b864e0a68f4229a39c7}{get\+Min\+Process\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the minimum processing time for requests, as specified in the configuration file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classConfig_aa1fcc3f8c259fe495db389eb3b30d01e}{get\+Max\+Process\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the maximum processing time for requests, as specified in the configuration file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classConfig}{Config}} class is responsible for loading and parsing configuration settings from a specified file. It provides methods to retrieve configuration values as integers or doubles, with default values if the keys are not found or if the values cannot be converted to the desired type. The class uses an unordered\+\_\+map to store key-\/value pairs of configuration settings, allowing for efficient retrieval of configuration values based on their keys. The \mbox{\hyperlink{classConfig}{Config}} class is designed to be flexible and easy to use, allowing other components of the system to access configuration settings without needing to worry about the details of file parsing or error handling. It serves as a central point for managing configuration settings, making it easier to maintain and update the system\textquotesingle{}s behavior based on different configurations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classConfig_a17adec3505bfe36f9997021af375fbdb}\label{classConfig_a17adec3505bfe36f9997021af375fbdb}} 
-{\bfseries Config} (const string \&file\+Path)
-\item 
-\mbox{\Hypertarget{classConfig_aa36b24fef004dc7e61d6c94a987b3064}\label{classConfig_aa36b24fef004dc7e61d6c94a987b3064}} 
-int {\bfseries get\+Initial\+Servers} () const
-\item 
-\mbox{\Hypertarget{classConfig_a8d7b483f6e9ceae9cfbb2beb47b4996f}\label{classConfig_a8d7b483f6e9ceae9cfbb2beb47b4996f}} 
-int {\bfseries get\+Runtime} () const
-\item 
-\mbox{\Hypertarget{classConfig_aad5e8f8380deecdbafa3f7c82003f31e}\label{classConfig_aad5e8f8380deecdbafa3f7c82003f31e}} 
-int {\bfseries get\+Rest\+Cycles} () const
-\item 
+\index{Config@{Config}!Config@{Config}}
+\index{Config@{Config}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{Config()}{Config()}}
+{\footnotesize\ttfamily Config\+::\+Config (\begin{DoxyParamCaption}\item[{const string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a \mbox{\hyperlink{classConfig}{Config}} object by loading configuration settings from the specified file path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path to the configuration file to be loaded. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classConfig_af7772a1a58df54d712d7f0ec7bfb4f33}\label{classConfig_af7772a1a58df54d712d7f0ec7bfb4f33}} 
-double {\bfseries get\+Arrival\+Probability} () const
-\item 
-\mbox{\Hypertarget{classConfig_af8d03201afc96b864e0a68f4229a39c7}\label{classConfig_af8d03201afc96b864e0a68f4229a39c7}} 
-int {\bfseries get\+Min\+Process\+Time} () const
-\item 
+\index{Config@{Config}!getArrivalProbability@{getArrivalProbability}}
+\index{getArrivalProbability@{getArrivalProbability}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getArrivalProbability()}{getArrivalProbability()}}
+{\footnotesize\ttfamily double Config\+::get\+Arrival\+Probability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the probability of request arrival, as specified in the configuration file. 
+
+\begin{DoxyReturn}{Returns}
+The probability of request arrival. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConfig_aa36b24fef004dc7e61d6c94a987b3064}\label{classConfig_aa36b24fef004dc7e61d6c94a987b3064}} 
+\index{Config@{Config}!getInitialServers@{getInitialServers}}
+\index{getInitialServers@{getInitialServers}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getInitialServers()}{getInitialServers()}}
+{\footnotesize\ttfamily int Config\+::get\+Initial\+Servers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the initial number of servers to be used in the load balancer, as specified in the configuration file. 
+
+\begin{DoxyReturn}{Returns}
+The initial number of servers. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classConfig_aa1fcc3f8c259fe495db389eb3b30d01e}\label{classConfig_aa1fcc3f8c259fe495db389eb3b30d01e}} 
-int {\bfseries get\+Max\+Process\+Time} () const
-\end{DoxyCompactItemize}
+\index{Config@{Config}!getMaxProcessTime@{getMaxProcessTime}}
+\index{getMaxProcessTime@{getMaxProcessTime}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getMaxProcessTime()}{getMaxProcessTime()}}
+{\footnotesize\ttfamily int Config\+::get\+Max\+Process\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the maximum processing time for requests, as specified in the configuration file. 
+
+\begin{DoxyReturn}{Returns}
+The maximum processing time for requests. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConfig_af8d03201afc96b864e0a68f4229a39c7}\label{classConfig_af8d03201afc96b864e0a68f4229a39c7}} 
+\index{Config@{Config}!getMinProcessTime@{getMinProcessTime}}
+\index{getMinProcessTime@{getMinProcessTime}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getMinProcessTime()}{getMinProcessTime()}}
+{\footnotesize\ttfamily int Config\+::get\+Min\+Process\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the minimum processing time for requests, as specified in the configuration file. 
+
+\begin{DoxyReturn}{Returns}
+The minimum processing time for requests. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConfig_aad5e8f8380deecdbafa3f7c82003f31e}\label{classConfig_aad5e8f8380deecdbafa3f7c82003f31e}} 
+\index{Config@{Config}!getRestCycles@{getRestCycles}}
+\index{getRestCycles@{getRestCycles}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getRestCycles()}{getRestCycles()}}
+{\footnotesize\ttfamily int Config\+::get\+Rest\+Cycles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the number of rest cycles to be used as a cooldown period for scaling servers in the load balancer, as specified in the configuration file. 
+
+\begin{DoxyReturn}{Returns}
+The number of rest cycles for cooldown. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConfig_a8d7b483f6e9ceae9cfbb2beb47b4996f}\label{classConfig_a8d7b483f6e9ceae9cfbb2beb47b4996f}} 
+\index{Config@{Config}!getRuntime@{getRuntime}}
+\index{getRuntime@{getRuntime}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getRuntime()}{getRuntime()}}
+{\footnotesize\ttfamily int Config\+::get\+Runtime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the total runtime in cycles for the load balancer, as specified in the configuration file. 
+
+\begin{DoxyReturn}{Returns}
+The total runtime in cycles. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

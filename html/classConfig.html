@@ -68,31 +68,194 @@ $(function() {
 <div class="title">Config Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="classConfig.html" title="The Config class is responsible for loading and parsing configuration settings from a specified file....">Config</a> class is responsible for loading and parsing configuration settings from a specified file. It provides methods to retrieve configuration values as integers or doubles, with default values if the keys are not found or if the values cannot be converted to the desired type. The class uses an unordered_map to store key-value pairs of configuration settings, allowing for efficient retrieval of configuration values based on their keys. The <a class="el" href="classConfig.html" title="The Config class is responsible for loading and parsing configuration settings from a specified file....">Config</a> class is designed to be flexible and easy to use, allowing other components of the system to access configuration settings without needing to worry about the details of file parsing or error handling. It serves as a central point for managing configuration settings, making it easier to maintain and update the system's behavior based on different configurations.  
+ <a href="classConfig.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Config_8h_source.html">Config.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a17adec3505bfe36f9997021af375fbdb"><td class="memItemLeft" align="right" valign="top"><a id="a17adec3505bfe36f9997021af375fbdb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Config</b> (const string &amp;filePath)</td></tr>
+<tr class="memitem:a17adec3505bfe36f9997021af375fbdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html#a17adec3505bfe36f9997021af375fbdb">Config</a> (const string &amp;filePath)</td></tr>
+<tr class="memdesc:a17adec3505bfe36f9997021af375fbdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classConfig.html" title="The Config class is responsible for loading and parsing configuration settings from a specified file....">Config</a> object by loading configuration settings from the specified file path.  <a href="classConfig.html#a17adec3505bfe36f9997021af375fbdb">More...</a><br /></td></tr>
 <tr class="separator:a17adec3505bfe36f9997021af375fbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa36b24fef004dc7e61d6c94a987b3064"><td class="memItemLeft" align="right" valign="top"><a id="aa36b24fef004dc7e61d6c94a987b3064"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getInitialServers</b> () const</td></tr>
+<tr class="memitem:aa36b24fef004dc7e61d6c94a987b3064"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html#aa36b24fef004dc7e61d6c94a987b3064">getInitialServers</a> () const</td></tr>
+<tr class="memdesc:aa36b24fef004dc7e61d6c94a987b3064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the initial number of servers to be used in the load balancer, as specified in the configuration file.  <a href="classConfig.html#aa36b24fef004dc7e61d6c94a987b3064">More...</a><br /></td></tr>
 <tr class="separator:aa36b24fef004dc7e61d6c94a987b3064"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d7b483f6e9ceae9cfbb2beb47b4996f"><td class="memItemLeft" align="right" valign="top"><a id="a8d7b483f6e9ceae9cfbb2beb47b4996f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getRuntime</b> () const</td></tr>
+<tr class="memitem:a8d7b483f6e9ceae9cfbb2beb47b4996f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html#a8d7b483f6e9ceae9cfbb2beb47b4996f">getRuntime</a> () const</td></tr>
+<tr class="memdesc:a8d7b483f6e9ceae9cfbb2beb47b4996f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the total runtime in cycles for the load balancer, as specified in the configuration file.  <a href="classConfig.html#a8d7b483f6e9ceae9cfbb2beb47b4996f">More...</a><br /></td></tr>
 <tr class="separator:a8d7b483f6e9ceae9cfbb2beb47b4996f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad5e8f8380deecdbafa3f7c82003f31e"><td class="memItemLeft" align="right" valign="top"><a id="aad5e8f8380deecdbafa3f7c82003f31e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getRestCycles</b> () const</td></tr>
+<tr class="memitem:aad5e8f8380deecdbafa3f7c82003f31e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html#aad5e8f8380deecdbafa3f7c82003f31e">getRestCycles</a> () const</td></tr>
+<tr class="memdesc:aad5e8f8380deecdbafa3f7c82003f31e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the number of rest cycles to be used as a cooldown period for scaling servers in the load balancer, as specified in the configuration file.  <a href="classConfig.html#aad5e8f8380deecdbafa3f7c82003f31e">More...</a><br /></td></tr>
 <tr class="separator:aad5e8f8380deecdbafa3f7c82003f31e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7772a1a58df54d712d7f0ec7bfb4f33"><td class="memItemLeft" align="right" valign="top"><a id="af7772a1a58df54d712d7f0ec7bfb4f33"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getArrivalProbability</b> () const</td></tr>
+<tr class="memitem:af7772a1a58df54d712d7f0ec7bfb4f33"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html#af7772a1a58df54d712d7f0ec7bfb4f33">getArrivalProbability</a> () const</td></tr>
+<tr class="memdesc:af7772a1a58df54d712d7f0ec7bfb4f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the probability of request arrival, as specified in the configuration file.  <a href="classConfig.html#af7772a1a58df54d712d7f0ec7bfb4f33">More...</a><br /></td></tr>
 <tr class="separator:af7772a1a58df54d712d7f0ec7bfb4f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8d03201afc96b864e0a68f4229a39c7"><td class="memItemLeft" align="right" valign="top"><a id="af8d03201afc96b864e0a68f4229a39c7"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getMinProcessTime</b> () const</td></tr>
+<tr class="memitem:af8d03201afc96b864e0a68f4229a39c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html#af8d03201afc96b864e0a68f4229a39c7">getMinProcessTime</a> () const</td></tr>
+<tr class="memdesc:af8d03201afc96b864e0a68f4229a39c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the minimum processing time for requests, as specified in the configuration file.  <a href="classConfig.html#af8d03201afc96b864e0a68f4229a39c7">More...</a><br /></td></tr>
 <tr class="separator:af8d03201afc96b864e0a68f4229a39c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1fcc3f8c259fe495db389eb3b30d01e"><td class="memItemLeft" align="right" valign="top"><a id="aa1fcc3f8c259fe495db389eb3b30d01e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxProcessTime</b> () const</td></tr>
+<tr class="memitem:aa1fcc3f8c259fe495db389eb3b30d01e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html#aa1fcc3f8c259fe495db389eb3b30d01e">getMaxProcessTime</a> () const</td></tr>
+<tr class="memdesc:aa1fcc3f8c259fe495db389eb3b30d01e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the maximum processing time for requests, as specified in the configuration file.  <a href="classConfig.html#aa1fcc3f8c259fe495db389eb3b30d01e">More...</a><br /></td></tr>
 <tr class="separator:aa1fcc3f8c259fe495db389eb3b30d01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="classConfig.html" title="The Config class is responsible for loading and parsing configuration settings from a specified file....">Config</a> class is responsible for loading and parsing configuration settings from a specified file. It provides methods to retrieve configuration values as integers or doubles, with default values if the keys are not found or if the values cannot be converted to the desired type. The class uses an unordered_map to store key-value pairs of configuration settings, allowing for efficient retrieval of configuration values based on their keys. The <a class="el" href="classConfig.html" title="The Config class is responsible for loading and parsing configuration settings from a specified file....">Config</a> class is designed to be flexible and easy to use, allowing other components of the system to access configuration settings without needing to worry about the details of file parsing or error handling. It serves as a central point for managing configuration settings, making it easier to maintain and update the system's behavior based on different configurations. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a17adec3505bfe36f9997021af375fbdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17adec3505bfe36f9997021af375fbdb">&#9670;&nbsp;</a></span>Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Config::Config </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classConfig.html" title="The Config class is responsible for loading and parsing configuration settings from a specified file....">Config</a> object by loading configuration settings from the specified file path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>The path to the configuration file to be loaded. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af7772a1a58df54d712d7f0ec7bfb4f33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7772a1a58df54d712d7f0ec7bfb4f33">&#9670;&nbsp;</a></span>getArrivalProbability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Config::getArrivalProbability </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the probability of request arrival, as specified in the configuration file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The probability of request arrival. </dd></dl>
+
+</div>
+</div>
+<a id="aa36b24fef004dc7e61d6c94a987b3064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa36b24fef004dc7e61d6c94a987b3064">&#9670;&nbsp;</a></span>getInitialServers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::getInitialServers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the initial number of servers to be used in the load balancer, as specified in the configuration file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The initial number of servers. </dd></dl>
+
+</div>
+</div>
+<a id="aa1fcc3f8c259fe495db389eb3b30d01e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1fcc3f8c259fe495db389eb3b30d01e">&#9670;&nbsp;</a></span>getMaxProcessTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::getMaxProcessTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the maximum processing time for requests, as specified in the configuration file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The maximum processing time for requests. </dd></dl>
+
+</div>
+</div>
+<a id="af8d03201afc96b864e0a68f4229a39c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d03201afc96b864e0a68f4229a39c7">&#9670;&nbsp;</a></span>getMinProcessTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::getMinProcessTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the minimum processing time for requests, as specified in the configuration file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The minimum processing time for requests. </dd></dl>
+
+</div>
+</div>
+<a id="aad5e8f8380deecdbafa3f7c82003f31e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad5e8f8380deecdbafa3f7c82003f31e">&#9670;&nbsp;</a></span>getRestCycles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::getRestCycles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the number of rest cycles to be used as a cooldown period for scaling servers in the load balancer, as specified in the configuration file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of rest cycles for cooldown. </dd></dl>
+
+</div>
+</div>
+<a id="a8d7b483f6e9ceae9cfbb2beb47b4996f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d7b483f6e9ceae9cfbb2beb47b4996f">&#9670;&nbsp;</a></span>getRuntime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::getRuntime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the total runtime in cycles for the load balancer, as specified in the configuration file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The total runtime in cycles. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="Config_8h_source.html">Config.h</a></li>
 <li>Config.cpp</li>

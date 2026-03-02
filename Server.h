@@ -1,7 +1,8 @@
 /**
  * @file Server.h
  * @brief The Server class represents a server in the load balancing system, responsible for processing incoming requests. Each Server object maintains its own state, including whether it is currently busy, the request it is processing, and the time remaining to complete the request.
- * The Server class provides methods to assign a new request to the server, process a cycle of
+ * The Server class provides methods to assign a new request to the server, process a cycle of work on the current request, check if the server is idle or done with its current request, and clear the completed request from the server's state.
+ * This class is used by the LoadBalancer to manage the processing of requests across multiple servers and to determine when to scale up or down the number of active servers based on the load.
  */
 
 #ifndef SERVER_H

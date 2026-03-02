@@ -1,7 +1,8 @@
 /**
  * @file RequestQueue.h
  * @brief The RequestQueue class manages a queue of Request objects, providing methods to enqueue new requests, dequeue requests for processing, check if the queue is empty, and get the current size of the queue.
- * The RequestQueue class serves as a fundamental component in the load balancing system, allowing for efficient
+ * The RequestQueue class serves as a fundamental component in the load balancing system, allowing for efficient management of incoming requests as they are processed by the servers in the LoadBalancer.
+ * It encapsulates the underlying data structure (a standard queue) and provides a simple interface for interacting with the queue of requests.
  */
 
 #ifndef REQUESTQUEUE_H

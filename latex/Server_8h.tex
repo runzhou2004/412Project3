@@ -2,20 +2,18 @@
 \label{Server_8h}\index{Server.h@{Server.h}}
 
 
-The \mbox{\hyperlink{classServer}{Server}} class represents a server in the load balancing system, responsible for processing incoming requests. Each \mbox{\hyperlink{classServer}{Server}} object maintains its own state, including whether it is currently busy, the request it is processing, and the time remaining to complete the request. The \mbox{\hyperlink{classServer}{Server}} class provides methods to assign a new request to the server, process a cycle of.  
+The \mbox{\hyperlink{classServer}{Server}} class represents a server in the load balancing system, responsible for processing incoming requests. Each \mbox{\hyperlink{classServer}{Server}} object maintains its own state, including whether it is currently busy, the request it is processing, and the time remaining to complete the request. The \mbox{\hyperlink{classServer}{Server}} class provides methods to assign a new request to the server, process a cycle of work on the current request, check if the server is idle or done with its current request, and clear the completed request from the server\textquotesingle{}s state. This class is used by the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} to manage the processing of requests across multiple servers and to determine when to scale up or down the number of active servers based on the load.  
 
 
 {\ttfamily \#include \char`\"{}Request.\+h\char`\"{}}\newline
-Include dependency graph for Server.\+h\+:
-\nopagebreak
+Include dependency graph for Server.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=145pt]{Server_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,5 +28,5 @@ class \mbox{\hyperlink{classServer}{Server}}
 
 
 \doxysubsection{Detailed Description}
-The \mbox{\hyperlink{classServer}{Server}} class represents a server in the load balancing system, responsible for processing incoming requests. Each \mbox{\hyperlink{classServer}{Server}} object maintains its own state, including whether it is currently busy, the request it is processing, and the time remaining to complete the request. The \mbox{\hyperlink{classServer}{Server}} class provides methods to assign a new request to the server, process a cycle of. 
+The \mbox{\hyperlink{classServer}{Server}} class represents a server in the load balancing system, responsible for processing incoming requests. Each \mbox{\hyperlink{classServer}{Server}} object maintains its own state, including whether it is currently busy, the request it is processing, and the time remaining to complete the request. The \mbox{\hyperlink{classServer}{Server}} class provides methods to assign a new request to the server, process a cycle of work on the current request, check if the server is idle or done with its current request, and clear the completed request from the server\textquotesingle{}s state. This class is used by the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} to manage the processing of requests across multiple servers and to determine when to scale up or down the number of active servers based on the load. 
 

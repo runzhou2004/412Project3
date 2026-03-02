@@ -1,19 +1,14 @@
 #include "LoadBalancer.h"
 #include <iostream>
 
+using namespace std;
+
 #define RED "\033[31m"
 #define GREEN "\033[32m"
 #define YELLOW "\033[33m"
 #define RESET "\033[0m"
 
-int totalRequestsProcessed = 0;
-int totalGenerated = 0;
-int serversAdded = 0;
-int serversRemoved = 0;
-int maxQueueSize = 0;
-int totalBlocked = 0;
-
-LoadBalancer::LoadBalancer(int initialServers, int rest) : restCycles(rest), restCounter(0) {
+LoadBalancer::LoadBalancer(int initialServers, int rest, std::ofstream& log) : logFile(log), currentCycle(0), restCycles(rest), restCounter(0) {
     for (int i = 0; i < initialServers; i++) servers.push_back(new Server(i));
 }
 
@@ -29,11 +24,13 @@ void LoadBalancer::generateReq(Request* r) {
     }
     else {
         totalBlocked++;
+        logFile << "[CYCLE " << currentCycle << "] Blocked Request from IP: " << r->ipIn << endl;
         delete r;
     }
 }
 
 void LoadBalancer::processCycle() {
+    currentCycle++;
     for (auto s:servers) {
         s->processCycle();
         if (s->isDone()) {
@@ -60,7 +57,9 @@ void LoadBalancer::scaleServers() {
     if (qSize > 80*sCount) {
         servers.push_back(new Server(sCount));
         serversAdded++;
-        cout << GREEN << "Added Server!" << RESET << endl;
+        cout << GREEN "[CYCLE " << currentCycle << "] Added Server! Total Servers: " << servers.size() << RESET << endl;
+        logFile << "------------------------------" << endl;
+        logFile << "[CYCLE " << currentCycle << "] Added Server! Total Servers: " << servers.size() << endl;
         restCounter = restCycles;
     }
     else if (qSize < 50*sCount && sCount > 1) {
@@ -68,8 +67,9 @@ void LoadBalancer::scaleServers() {
         delete servers.back();
         servers.pop_back();
         serversRemoved++;
-        cout << RED << "Removed Server!" << RESET << endl;
-        restCounter = restCycles;
+        cout << RED "[CYCLE " << currentCycle << "] Removed Server! Total Servers: " << servers.size() << RESET << endl;
+        logFile << "------------------------------" << endl;
+        logFile << "[CYCLE " << currentCycle << "] Removed Server! Total Servers: " << servers.size() << endl;
     }
 }
 
@@ -87,6 +87,10 @@ int LoadBalancer::getGeneratedRequests() {
 
 int LoadBalancer::getProcessedRequests() {
     return totalRequestsProcessed;
+}
+
+int LoadBalancer::getBlockedRequests() {
+    return totalBlocked;
 }
 
 int LoadBalancer::getServersAdded() {

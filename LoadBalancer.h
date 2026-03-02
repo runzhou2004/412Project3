@@ -2,6 +2,7 @@
 #define LOADBALANCER_H
 
 #include <vector>
+#include <fstream>
 #include "Server.h"
 #include "RequestQueue.h"
 #include "IPBlocker.h"
@@ -20,6 +21,14 @@ using namespace std;
  */
 class LoadBalancer {
     private:
+        int totalRequestsProcessed = 0;
+        int totalGenerated = 0;
+        int serversAdded = 0;
+        int serversRemoved = 0;
+        int maxQueueSize = 0;
+        int totalBlocked = 0;
+        std::ofstream& logFile;
+        int currentCycle = 0;
         vector<Server*> servers;
         RequestQueue queue;
         IPBlocker blocker;
@@ -30,8 +39,10 @@ class LoadBalancer {
         /**
          * @brief Constructs a LoadBalancer with a specified number of initial servers and a cooldown period for scaling.
          * @param initialServers The number of servers to start with.
+         * @param rest The cooldown period for scaling.
+         * @param log The log file to write logs to.
          */
-        LoadBalancer(int initialServers, int rest);
+        LoadBalancer(int initialServers, int rest, std::ofstream& log);
         /**
          * @brief Destructor for the LoadBalancer class, responsible for cleaning up dynamically allocated Server objects.
          */
@@ -67,6 +78,7 @@ class LoadBalancer {
 
         int getGeneratedRequests();
         int getProcessedRequests();
+        int getBlockedRequests();
         int getServersAdded();
         int getServersRemoved();
         int getMaxQueueSize();
